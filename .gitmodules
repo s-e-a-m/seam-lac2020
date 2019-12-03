@@ -1,0 +1,3 @@
+[submodule "lac-paper-templates"]
+	path = lac-paper-templates
+	url = https://github.com/linuxaudio/lac-paper-templates.git
