@@ -32,11 +32,11 @@
 %------------------------------------------------------------------------------------------
 %  !  !  !  !  !  !  !  !  !  !  !  ! user defined variables  !  !  !  !  !  !  !  !  !  !  !  !  !  !
 % Please use these commands to define title and author(s) of the paper:
-\def\papertitle{Templates for LAC-20, Bordeaux, France}
-\def\paperauthorA{Author One}
-\def\paperauthorB{Author Two}
-\def\paperauthorC{Author Three}
-\def\paperauthorD{Author Four}
+\def\papertitle{SEAM PROJECT - Sustained Electroacoustic Music}
+\def\paperauthorA{Davide Tedesco}
+\def\paperauthorB{Giuseppe Silvi}
+%\def\paperauthorC{Author Three}
+%\def\paperauthorD{Author Four}
 
 % Authors' affiliations have to be set below
 
@@ -71,7 +71,7 @@
 \ifluatex
   \usepackage[
     pdftitle={\papertitle},
-    pdfauthor={\paperauthorA, \paperauthorB, \paperauthorC, \paperauthorD},
+    pdfauthor={\paperauthorA, \paperauthorB},%, \paperauthorC, \paperauthorD},
     colorlinks=false, % links are activated as colror boxes instead of color text
     bookmarksnumbered, % use section numbers with bookmarks
     pdfstartview=XYZ % start with zoom=100% instead of full screen; especially useful if working with a big screen :-)
@@ -87,7 +87,7 @@
   \ifxetex
     \usepackage[
       pdftitle={\papertitle},
-      pdfauthor={\paperauthorA, \paperauthorB, \paperauthorC, \paperauthorD},
+      pdfauthor={\paperauthorA, \paperauthorB},%, \paperauthorC, \paperauthorD},
       colorlinks=false, % links are activated as colror boxes instead of color text
       bookmarksnumbered, % use section numbers with bookmarks
       pdfstartview=XYZ % start with zoom=100% instead of full screen; especially useful if working with a big screen :-)
@@ -104,7 +104,7 @@
     \ifpdf % compiling with pdflatex
       \usepackage[pdftex,
         pdftitle={\papertitle},
-        pdfauthor={\paperauthorA, \paperauthorB, \paperauthorC, \paperauthorD},
+        pdfauthor={\paperauthorA, \paperauthorB},%, \paperauthorC, \paperauthorD},
         colorlinks=false, % links are activated as colror boxes instead of color text
         bookmarksnumbered, % use section numbers with bookmarks
         pdfstartview=XYZ % start with zoom=100% instead of full screen; especially useful if working with a big screen :-)
@@ -138,15 +138,15 @@
 %-----------------------------------SINGLE-AUTHOR HEADER ENDS------------------------------------------------------
 
 %---------------TWO-AUTHOR HEADER STARTS (uncomment below if your paper has two authors)-----------------------
-% \twoaffiliations{
-% \paperauthorA \,\sthanks{This work was supported by the XYZ Foundation}}
-% {\href{https://scrime.u-bordeaux.fr}{SCRIME} \\ Université de Bordeaux, France \\
-% {\tt \href{mailto:ping@linuxaudio.org}{ping@linuxaudio.org}}
-% }
-% {\paperauthorB \,\sthanks{This guy is a very good fellow}}
-% {\href{https://ccrma.stanford.edu}{CCRMA} \\ Stanford University, USA \\
-% {\tt \href{mailto:lac@ccrma.stanford.edu}{lac@ccrma.stanford.edu}}
-% }
+ \twoaffiliations{
+ \paperauthorA \,\sthanks{This work was supported by the XYZ Foundation}}
+ {\href{https://scrime.u-bordeaux.fr}{SCRIME} \\ Université de Bordeaux, France \\
+ {\tt \href{mailto:ping@linuxaudio.org}{ping@linuxaudio.org}}
+ }
+ {\paperauthorB \,\sthanks{This guy is a very good fellow}}
+ {\href{https://ccrma.stanford.edu}{CCRMA} \\ Stanford University, USA \\
+ {\tt \href{mailto:lac@ccrma.stanford.edu}{lac@ccrma.stanford.edu}}
+ }
 %-------------------------------------TWO-AUTHOR HEADER ENDS------------------------------------------------------
 
 %---------------THREE-AUTHOR HEADER STARTS (uncomment below if your paper has three authors)-----------------------
@@ -166,23 +166,23 @@
 %-------------------------------------THREE-AUTHOR HEADER ENDS------------------------------------------------------
 
 %----------------FOUR-AUTHOR HEADER STARTS (uncomment below if your paper has four authors)-----------------------
-\fouraffiliations{
-\paperauthorA \,\sthanks{This work was supported by the XYZ Foundation}}
-{\href{https://scrime.u-bordeaux.fr}{SCRIME} \\ Université de Bordeaux, France \\
-{\tt \href{mailto:ping@linuxaudio.org}{ping@linuxaudio.org}}
-}
-{\paperauthorB \,\sthanks{This guy is a very good fellow}}
-{\href{https://ccrma.stanford.edu}{CCRMA} \\ Stanford University, USA \\
-{\tt \href{mailto:lac@ccrma.stanford.edu}{lac@ccrma.stanford.edu}}
-}
-{\paperauthorC \,\sthanks{Illustrious contributor}}
-{\href{http://www.musikwissenschaft.uni-mainz.de/Musikinformatik/}{Johannes Gutenberg University (JGU)} \\  Mainz, Germany\\
-{\tt \href{mailto:lac@uni-mainz.de}{lac@uni-mainz.de}}
-}
-{\paperauthorD \,\sthanks{Thanks to the predecessors for the templates}}
-{\href{https://c-base.org/}{C-Base} \\ Berlin, Germany \\
-{\tt \href{mailto:lac@c-base.com}{lac@c-base.com}}
-}
+%\fouraffiliations{
+%\paperauthorA \,\sthanks{This work was supported by the XYZ Foundation}}
+%{\href{https://scrime.u-bordeaux.fr}{SCRIME} \\ Université de Bordeaux, France \\
+%{\tt \href{mailto:ping@linuxaudio.org}{ping@linuxaudio.org}}
+%}
+%{\paperauthorB \,\sthanks{This guy is a very good fellow}}
+%{\href{https://ccrma.stanford.edu}{CCRMA} \\ Stanford University, USA \\
+%{\tt \href{mailto:lac@ccrma.stanford.edu}{lac@ccrma.stanford.edu}}
+%}
+%{\paperauthorC \,\sthanks{Illustrious contributor}}
+%{\href{http://www.musikwissenschaft.uni-mainz.de/Musikinformatik/}{Johannes Gutenberg University (JGU)} \\  Mainz, Germany\\
+%{\tt \href{mailto:lac@uni-mainz.de}{lac@uni-mainz.de}}
+%}
+%{\paperauthorD \,\sthanks{Thanks to the predecessors for the templates}}
+%{\href{https://c-base.org/}{C-Base} \\ Berlin, Germany \\
+%{\tt \href{mailto:lac@c-base.com}{lac@c-base.com}}
+%}
 %-------------------------------------FOUR-AUTHOR HEADER ENDS------------------------------------------------------
 
 \begin{document}
