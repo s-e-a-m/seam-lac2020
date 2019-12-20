@@ -293,6 +293,53 @@ Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat
 nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa
 qui officia deserunt mollit anim id est laborum.
 
+\begin{lstlisting}
+import("../faust-libraries/seam.lib");
+\end{lstlisting}
+
+Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor
+incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
+Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat
+nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa
+qui officia deserunt mollit anim id est laborum.
+
+\begin{lstlisting}
+ctrlgroup(x) = hgroup("[02]", x);
+main = vgroup(
+  "[01]Check both boxes to start",
+  *(IL) : de.delay(maxdel, D-1))
+  with{
+    maxdel = ma.SR *(180);
+    B = checkbox(
+      "[1]Uncheck me after the incipit
+      (max 180s)");
+    I = int(B);
+    R = (I-I') <= 0;
+    D = (+(I):*(R))~_;
+    L = checkbox(
+      "[2] I'm Sitting...
+      Uncheck me at the end");
+    IL = int(L);
+  };
+\end{lstlisting}
+
+Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor
+incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
+Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat
+nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa
+qui officia deserunt mollit anim id est laborum.
+
+
+\begin{lstlisting}
+process = ctrlgroup(chstrip) : main : ctrlgroup(hgroup("[03] ", *(g88) : svmeter));
+\end{lstlisting}
+
+%--------------------------------------------------------------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------------------------------------------------------------
+
 \section{Rewrite}
 \label{sec:rewriting}
 
