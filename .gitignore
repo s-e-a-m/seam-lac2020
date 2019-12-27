@@ -14,7 +14,7 @@ _site/
 .jekyll-metadata
 
 ### LaTeX ###
-paper/LAC-20.pdf
+paper/LAC-20-SEAM.pdf
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
