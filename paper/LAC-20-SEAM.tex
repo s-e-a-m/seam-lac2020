@@ -210,7 +210,7 @@ The musical composition is close to a point break: almost one hundred years ago 
 
 The ambition of this project is to grow the interpretation and the electroacoustic musical practice with the consciousness of the electronic and informatics problems that had made arduous to approach this music and prevented the growth of interpretative thinking. It is possible, with a community structure, to determine, build and stratify interpretation of musical core, the repertoire, concealing the environment-related technological issues. They are instruments, not the music itself after all.
 
-The Problem section will introduce the definition of general issues and actual circumstances. After the description of the SEAM project, there are three sections in which a starting idea of sustainability is applied and described in three different processes.
+%The Problem section will introduce the definition of general issues and actual circumstances. After the description of the SEAM project, there are three sections in which a starting idea of sustainability is applied and described in three different processes.
 
 %--------------------------------------------------------------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------------------------------------------------------------
@@ -277,24 +277,22 @@ SEAM coordinates:
 
 \subsection{SEAM Instruments}
 
-During the lessons in which SEAM Project was born and related problems was shared with classes to sensitize students to work in community the core software used to explode issues was \emph{Faust}. 
+During the lessons in which SEAM Project was born and related problems were shared with classes to sensitize students to community work, the core software used to explode issues was \emph{Faust}. 
 
-Text based DSP offer deepest learning experience and at the same time great \emph{expressive} possibility readable without difficulties. Faust code could be written to educate musician at the same time with power and efficiency. 
-
-The faust-libraries concept are useful to write once and read forever code. 
+Text-based DSP offers the deepest learning experience and great expressivity and readability. Faust code could be written to educate a musician at the same time with computation versatility and efficiency. The faust-libraries concept is useful to write once and read forever code. 
 
 \begin{lstlisting}
 import("../faust-libraries/seam.lib");
 \end{lstlisting}
 
-The SEAM library points to other libraries catalogued by arguments, like Faust libraries. 
+The SEAM library points to other libraries catalogued by arguments, like standard Faust libraries. 
 
-Actually there are:
+Actually there are four different libraries:
 \begin{description}
-\item[gerzon.lib] contains early Michael Gerzon works to conduct him to conceives ambisonic.
-\item[hardware.lib] contains hardware related functions like I/O to audio interface and MIDI mapping.
+\item[gerzon.lib] Gerzon.lib contains early Michael Gerzon works that conduct him to conceives ambisonic. It contains some core concept of spatialization and stereophony. 
+\item[hardware.lib] contains hardware-related functions like I/O assignations to audio interface and MIDI mapping.
 \item[measurement.lib] contains some display feature for audio inspection.
-\item[nono.lib] contains Live Electronics Instruments lately used by Nono.
+\item[nono.lib] points to contain Live Electronics Instruments used by Nono. The idea is to collect instruments into the library and use it work by work in hardware-like equipment. 
 \end{description}
 
 \subsection{SEAM Topology}
