@@ -367,13 +367,7 @@ The many versions proposed by the author in the music score points to multiple c
 
 The offline process remains, like the original statement says, really unchanged. A double recording apparatus, of each nature, and a chair to sit down, and practice. 
 
-We propose three different ready-to-fight real-time environments, to practice with the musical behaviour of the piece. The first is one-in-one-out, easy to setup. The second is a stereophonic version, where per stereophonic sound we refer to an unbreakable experience of acoustical listening. The third is four-channel ambisonic version, usable by who four-dimensionally thinks space-related issues, like us, and wants to pump his perception. 
-
-With this first writing, we introduce the three-parted environment: inputs, main, outputs. It is not a tautological issue, it is a way to insulates the main process by the personalized environment. Declaring the main as the the only place for the score related processes, each architectural custom construction useful to staging it, must be outside that region. So, each input channel pre-processing and complex out-mix are predisposed in the relative paths. By this way, a work-by-work practice is straightforward looking inside main boxes, and custom infrastructure remains the same every time. 
-
-\begin{lstlisting}
-import("../faust-libraries/seam.lib");
-\end{lstlisting}
+The strategy adopted to create a real-time performative environment to \emph{I am sitting} is to count samples of the duration of the initial statement and pass that count to the delay time. The code here proposed is only to evidence the straightforward writing and economy in Faust, underlining that part of the code is stolen from Faust manual itself. 
 
 %--------------------------------------------
 %----------------larghezza massima del codice
@@ -391,10 +385,18 @@ main = vgroup("[01]
   };
 \end{lstlisting}
 
+We propose three different ready-to-fight real-time environments, to practice with the musical behaviour of the piece. The first is one-in-one-out, easy to setup. The second is a stereophonic version, where per stereophonic sound we refer to an unbreakable experience of acoustical listening. The third is four-channel ambisonic version, usable by who four-dimensionally thinks space-related issues, like us, and wants to pump his perception. 
+
 \begin{lstlisting}
-ctrlgroup(x) = hgroup("[02]", x);
-process = ctrlgroup(chstrip) : main : ctrlgroup(hgroup("[03] ", *(g88) : svmeter));
+process = input : main : output;
 \end{lstlisting}
+
+With this first writing, we introduce the three-parted environment: inputs, main, outputs. It is not a tautological issue, it is a way to insulates the main process by the personalized environment. Declaring the main as the the only place for the score related processes, each architectural custom construction useful to staging it, must be outside that region. So, each input channel pre-processing and complex out-mix are predisposed in the relative paths. By this way, a work-by-work practice is straightforward looking inside main boxes, and custom infrastructure remains the same every time. 
+
+\begin{figure}[ht]
+\centerline{\includegraphics[width=.45\textwidth]{img/lais-process}}
+\caption{\label{re-dia-6c}{\it The three-parted process with inputs and outputs custom infrastructures separate from the main process. The 18 inputs are derived from \emph{RME Fireface 800} included in \emph{hardware.lib}. A graphical menu drive an audio selector to route the proper input to main process.}}
+\end{figure}
 
 %--------------------------------------------------------------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------------------------------------------------------------
@@ -403,13 +405,22 @@ process = ctrlgroup(chstrip) : main : ctrlgroup(hgroup("[03] ", *(g88) : svmeter
 \section{Rewrite}
 \label{sec:rewriting}
 
-The second topology of score approached has electroacoustic deep documentation and score notation with the, what we defined, hole words. Risonanze Erranti is a long work of the latest Nono's composition period, with many live electronics instruments inside the ensemble. 
+The second topology of score approached has electroacoustic deep documentation and score notation with the, what we defined, \emph{hole-words}. Risonanze Erranti is a long work of the latest Nono's composition period, with many live electronics instruments inside the ensemble, some of that was undocumented hardware. 
 
 %--------------------------------------------------------------------------------------------------------------------------------------
 
+\begin{figure}[ht]
+\centerline{\includegraphics[width=.45\textwidth]{img/re-diagramma11}}
+\caption{\label{re-dia-6c}{\it Block diagram of scene 11a and 11b}}
+\end{figure}
+
 \subsection{1989, \emph{Risonanze Erranti}, Luigi Nono}
 
-To avoid misunderstanding, every technological rewriting based on block-diagram is a partial true. Each block named by an intergalactic hole-word can bring everywhere. The sound of the \emph{Halaphone} (to cite one of the Nono's hole-word block) not exist. The \emph{Halaphone} is musical thinking. It is a way to connect musical thinking and consolidated musical practice, embracing acoustical space and electronics. 
+To avoid misunderstanding, every technological rewriting based on block-diagram is a partial true. Each block named by an intergalactic hole-word can bring everywhere. The sound of the \emph{Halaphon} (to cite one of the Nono's hole-word block) not exist. The \emph{Halaphon} is musical thinking. It is a way to connect musical thinking and consolidated musical practice, embracing acoustical space and electronics. 
+
+\begin{quote}
+The Halaphon is a digital spatializer which, with the loudspeakers arranged in the room, controls the movement of sound in space. This movement must be continuous, with a soft, superimposed fading from one loudspeaker to another. The dynamics indicated in the score for the Contralto and the instruments also apply for the dynamics of the Halaphon outputs. %Overall four interventions with the Halaphon are foreseen (see Diagrams 11, 13, 16 and 19): with the exception of the intervention of programme 16, they are all closely linked to the rhythmic-temporal execution of the voice or instruments. Further information on programming the Halaphon is to be found further on, in the paragraph Special Information, in the diagrams and notations in the score.
+\end{quote}
 
 Reading a musical score unknowing the mental state of the composer that brought it to the world is a daily committed crime. A composer poetic is linked directly to the work he is producing and his musical practice and research.
 
@@ -429,13 +440,13 @@ Questo vuol dire, per me, pensare la musica. E la stessa cosa avviene col comput
 \end{quote}
 
 \begin{figure}[ht]
-\centerline{\includegraphics[scale=0.5]{img/re-diagramma6c}}
-\caption{\label{re-dia-6c}{\it Block Diagram}}
+\centerline{\includegraphics[width=.45\textwidth]{img/re-diagramma6c}}
+\caption{\label{re-dia-6c}{\it Block Diagram 6c}}
 \end{figure}
 
 \begin{figure}[ht]
-\centerline{\includegraphics[scale=0.5]{img/re-diagramma3b}}
-\caption{\label{re-dia-3b}{\it Block Diagram}}
+\centerline{\includegraphics[width=.45\textwidth]{img/re-diagramma3b}}
+\caption{\label{re-dia-3b}{\it Block Diagram 3b}}
 \end{figure}
 
 %--------------------------------------------------------------------------------------------------------------------------------------
@@ -454,7 +465,7 @@ The porting of music informatics to a sustained programming language and technol
 Working side-by-side of Michelangelo Lupone for "Mobile Locale" porting is something extremely musical related and only marginally a technological and informatics matter. 
 
 \begin{figure}[ht]
-\centerline{\includegraphics[scale=0.5]{img/1-comp}}
+\centerline{\includegraphics[width=.45\textwidth]{img/1-comp}}
 \caption{\label{ml-gen-dia}{\it Score General Block Diagram}}
 \end{figure}
 
@@ -466,7 +477,7 @@ nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa
 qui officia deserunt mollit anim id est laborum.
 
 \begin{figure}[ht]
-\centerline{\includegraphics[scale=0.5]{img/main}}
+\centerline{\includegraphics[width=.45\textwidth]{img/main}}
 \caption{\label{ml-main}{\it Main processes}}
 \end{figure}
 
@@ -478,7 +489,7 @@ nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa
 qui officia deserunt mollit anim id est laborum.
 
 \begin{figure}[ht]
-\centerline{\includegraphics[scale=0.5]{img/2-comp}}
+\centerline{\includegraphics[width=.45\textwidth]{img/2-comp}}
 \caption{\label{ml-dia-exp}{\it Score Block Diagram Explosion}}
 \end{figure}
 
@@ -490,7 +501,7 @@ nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa
 qui officia deserunt mollit anim id est laborum.
 
 \begin{figure}[ht]
-\centerline{\includegraphics[scale=0.5]{img/wa}}
+\centerline{\includegraphics[width=.45\textwidth]{img/wa}}
 \caption{\label{wa-block}{\it WA Block Diagram}}
 \end{figure}
 
