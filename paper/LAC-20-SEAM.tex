@@ -387,11 +387,6 @@ The many versions proposed by the author in the music score points to multiple c
 
 The offline process remains, like the original statement says, really unchanged. A double recording apparatus, of each nature, and a chair to sit down, and practice. 
 
-\begin{figure}[ht]
-\centerline{\includegraphics[width=.45\textwidth]{img/lais-process}}
-\caption{\label{re-dia-6c}{\it The three-parted process with inputs and outputs custom infrastructures separate from the main process. The 18 inputs are derived from \emph{RME Fireface 800} included in \emph{hardware.lib}. A graphical menu drive an audio selector to route the proper input to the main process.}}
-\end{figure}
-
 The strategy adopted to create a real-time performative environment to \emph{I am sitting} is to count samples of the duration of the initial statement and pass that count to the delay time. The code here proposed is only to evidence the straightforward writing and economy in Faust, underlining that part of the code is stolen from Faust manual itself. 
 
 %--------------------------------------------
@@ -418,6 +413,11 @@ process = input : main : output;
 
 With this first writing, we introduce the three-parted environment: inputs, main, outputs. It is not a tautological issue, it is a way to insulates the main process by the personalized environment. Declaring the main as the the only place for the score related processes, each architectural custom construction useful to staging it, must be outside that region. So, each input channel pre-processing and complex out-mix are predisposed in the relative paths. By this way, a work-by-work practice is straightforward looking inside main boxes, and custom infrastructure remains the same every time. 
 
+\begin{figure}[ht]
+\centerline{\includegraphics[width=.45\textwidth]{img/lais-process}}
+\caption{\label{re-dia-6c}{\it The three-parted process with inputs and outputs custom infrastructures separate from the main process. The 18 inputs are derived from \emph{RME Fireface 800} included in \emph{hardware.lib}. A graphical menu drive an audio selector to route the proper input to the main process.}}
+\end{figure}
+
 %--------------------------------------------------------------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------------------------------------------------------------
@@ -430,6 +430,17 @@ The second topology of score approached has electroacoustic deep documentation a
 %--------------------------------------------------------------------------------------------------------------------------------------
 
 \subsection{1989, \emph{Risonanze Erranti}, Luigi Nono}
+
+%Risonanze erranti, composta nel 1986, ebbe la sua prima esecuzione nel marzo dello stesso anno a Colonia, a cui seguirono altre due esecuzioni, Torino 1986 e Parigi 1987, prima di arrivare alla versione definitiva. Questo lavoro si configura come la prima tappa di un ciclo di Lieder che doveva svilupparsi in parallelo ai post-prae ludi (il n.1 “per Donau” e il n.3 “BAAB-ARR”), composizioni ideate “prima” di Prometeo. Tragedia dell’ascolto (1984-85), ma realizzate “dopo” e strettamente legate al virtuosismo dei suoi solisti-collaboratori. Il lavoro è dedicato a Massimo Cacciari che ha curato i testi di Prometeo e di molti altri lavori di questo periodo, oltre ad aver condiviso con Nono lo sviluppo di una nuova fase creativa a cavallo degli anni ’80 del secolo scorso. In Risonanze erranti, Nono utilizza frammenti di testi di Herman Melville, soprattuto dai Battle-Pieces and Aspects of the War (1866) e di Ingeborg Bachmann (Kleine Delikatessen, 1963) con echi musicali del passato tratti da Guillaume de Machaut (Lay de plour), Josquin Desprez (Adieu mes amours) e Johannes Ockeghem (Malheur me bat). Alterna forti contrasti dinamici  nelle percussioni con colpi secchi dei bongos e dei crotali che diventano carezze sonore quando i percussionisti sfiorano con le mani la superficie rugosa delle campane di pastori sardi, la pelle dei tamburi, i dischi di metalo dei crotali. Queste sonorità subliminali vengono ulteriormente moltiplicate e proiettate nello spazio acustico attraverso l’elettronica, con un banco di 8 echi elettronici caratterizzati da una precisa struttura ritmica asimmetrica nella sua ripetizione iterata: nelle parole di Nono, “suoni erranti nello spazio vero strumento componente sempre più in attesa”. In maniera analoga la voce si interpola con il flauto/ottavino e la tuba, confondendosi a vicenda, esplodendo in sforzatissimi a cinque f per sparire nel silenzio sonoro dei pianissimi a sei p, alternando gesti esasperati a rassegnati abbandoni in cui la parola adieu, da Desprez, si allontana nello spazio come fosse lanciata verso l’infinito.
+%
+%Alvise Vidolin
+%
+%(tratto dal programma di sala dell'Ex Novo Musica 2015, Classici di Oggi, Venezia 2015)
+
+\begin{figure}[ht]
+\centerline{\includegraphics[width=.45\textwidth]{img/re-diagramma11}}
+\caption{\label{re-dia-6c}{\it Block diagram of scene 11a and 11b}}
+\end{figure}
 
 To avoid misunderstanding, every technological rewriting based on block-diagram is a partial true. Each block named by an intergalactic hole-word can bring everywhere. The sound of the \emph{Halaphon} (to cite one of the Nono's hole-word block) not exist. The \emph{Halaphon} is musical thinking was way to connect pure musical thinking with consolidated musical practice, embracing acoustical space and electronics. 
 
@@ -463,11 +474,6 @@ Tutto il melodramma italiano si è realizzato in una forma già prefissata. Ma c
 
 Questo vuol dire, per me, pensare la musica. E la stessa cosa avviene col computer: nel tempo reale tu hai la possibilità di programmare, ma anche di intervenire, modificare, trasformare tutto, completamente. Una volta programmato, il computer non va avanti come una locomotiva sul binario., che niente la può fermare. Il computer non è intelligenza delegata agli altri. No, è un mezzo che ti obbliga a un nuovo tipo di sapere, di conoscenza, esattamente come i piani acustici della chiesa di S. Lorenzo. Intendo dire che Piano ha costruito, insieme alla chiesa, una \emph{machina da sonàr} come si diceva nel Cinquecento. E con lo Studio di Friburgo, con Hans Peter Haller, con Alvise Vidolin, con il processore, le quattro orchestre e i solisti, noi verifichiamo continuamente le acustiche e inseriamo delle continue modifiche a ciò che ho pensato o scritto\cite{nono84}\footnote{The space is one of the composing elements, even if from the nineteenth century, from the concert hall time and from the opera, it doesn’t happen anymore. The italian melodrama has been realised with a prefixed construction form. To continue as it was thought initially, it could have been like we have only considered truthful the only Sonata form of a certain specific Beethoven composition period, as he never transformed and twisted the form till the last sonatas. This is, for me, thinking about music. And the same thing happens with the computer: we have the possibility to program, to intervene, to modify and to transform everything completely, in real time. Once a computer is programmed, it will not go forward as a locomotive on a railway, which it become unstoppable. The computer it’s not a delegated intelligence. No, the computer it’s a medium that obliges you to learn new types of knowledges, similarly to the acoustic dimensions of S.Lorenzo’s Church. Renzo Piano has built, together with the church, a \emph{machina da sonàr} (a machine to play) as it would have been called in the sixteenth century. With the Freiburg Studio project, Hans Peter Haller, Alvise Vidolin, the processor, the four orchestras and soloists, we verify continuously the acoustics and we insert changes to what I’ve written and thought.}. 
 \end{quote}
-
-\begin{figure}[ht]
-\centerline{\includegraphics[width=.45\textwidth]{img/re-diagramma11}}
-\caption{\label{re-dia-6c}{\it Block diagram of scene 11a and 11b}}
-\end{figure}
 
 Musical score thinking and annotating procedure to obtain a musical resultance, like the Nono's procedure of studying, practising, listening and writing once between infinite possibilities, declare itself an attempt to do something not complete in its process. The scenes division of the technical score, for example, is a procedure derived by the environment at their disposal. As we can see through the scenes navigation, they are often a solution to an old-complexity routing, but today most of these scenes could be joined and driven by more flexibles and accurate, multiple and automate remote controllers. 
 
