@@ -315,24 +315,29 @@ Developing on Lemouton \cite{lem16} the concept of the instrument, and parallel 
 %For computer music, things are slightly different because of the nature of the “instrument”. There is an extra step: constructing the instrument. In this sense the computer music performer is also his own instrument-builder (luthier). Moreover, there is no school or conservatory to learn how to become a computer virtuoso today.
 %\end{quote}
 
-During the lessons in Rome Conservatory in which \emph{SEAM} was born and its related problems were shared with classes to sensitize students to community work, the core software used to explode issues was \emph{Faust}\footnote{\url{https://faust.grame.fr}}. This wasn't a restriction, it was a preference. Text-based DSP offers the deepest learning experience and great expressivity and readability. \emph{Faust} code could be written to educate a musician at the same time with computation versatility and efficiency. The \emph{faust libraries} concept is useful to write once and read forever code.
-
-We think \emph{Faust} itself represents a rather concept of electroacoustic sustainability. Thinking, for example, at the \emph{filters.lib} and at the names that contributed the enrichment of speculation around each object, make us wish to a musical interest capable to do community more than other software.
+During the lessons in Rome Conservatory in which \emph{SEAM} was born and its related problems were shared with classes to sensitize students to community work, the core software used to explode issues was \emph{Faust}\footnote{\url{https://faust.grame.fr}}. This wasn't a restriction, it was a preference. Text-based DSP offers the deepest learning experience and great expressivity and readability. \emph{Faust} code could be written to educate a musician at the same time with computation versatility and efficiency. The \emph{Faust libraries} concept is useful to focus on write once, and read forever, code. We think \emph{Faust} itself represents a rather concept of electroacoustic sustainability. Thinking, for example, at the \emph{filters.lib} and at the names that contributed the enrichment of speculation around each object, make us wish to a musical interest capable to do community more than with the adoption of other software.
 
 Instruments carved by musical ideas on readable text (code) becomes a sub-literature in which each brick maintain the power of the source code, the clarity of an equation, the efficiency of the continuous development, the reusability of a word in different contexts. 
 
-The SEAM library points to other libraries catalogued by arguments, like in \emph{Standard Faust Libraries}. 
+%--------------------------------------------
+%----------------larghezza massima del codice
+\begin{lstlisting}
+import("stdfaust.lib");
+import("../faust-libraries/seam.lib");
+\end{lstlisting}
 
-Actually there are four different libraries:
+The \emph{SEAM library} local importing points to other libraries catalogued by arguments, like in \emph{Standard Faust Libraries}. 
+
+Actually there are five different libraries:
 \begin{description}
-  \item[seam.lib] contains general functions and the pointers to the separates specific libraries. It may contain the custom performative environment definition, as for the inputs, the controls and outs.
-  \item[gerzon.lib] contains early Michael Gerzon works, his core concepts of spatialization and stereophony that conducted him to conceive ambisonic technology. 
-  \item[hardware.lib] contains hardware-related functions like I/O assignations to audio interface, with a routing strategy to connect instruments to real-world hardware and MIDI mapping.
+  \item[seam.lib] contains general functions and the pointers to each specific libraries. It may contain the custom performative environment definition, as for the inputs, the controls and outputs.
+  \item[gerzon.lib] contains early Michael Gerzon works, his core concepts of spatialization and stereophony that conducted him to conceive ambisonic technology. In a sustained environmet, the role of this library is to avoid misunderstanding of what \emph{stereo} is and what we are loosing in the electroacoustic staging perception. 
+  \item[hardware.lib] contains hardware-related functions like MIDI mapping and I/O assignment to an audio interface, with a routing strategy to connect instruments to real-world hardware with a graphical user interface to map routing.
   \item[measurement.lib] contains some audio analysis strategy to define musical display feature for audio inspection, such as integrated measurement and loudness monitoring are indispensable tools for today staging of public addressed music.
-  \item[nono.lib] is the first author-related library that points to contain Live Electronics Instruments used by Nono. The idea is to collect instruments into the library and use it, work by work, in a hardware-like view. 
+  \item[nono.lib] is the first author-related library that points to contain \emph{Live Electronics Instruments}. The idea is to collect instruments into the library and use it, work by work, in a hardware-like view. \emph{nono.lib} should contain reusable instruments typical of his literature like the Harmonizer, the Halaphon, and so on, directly called back into the performance environment of each work, to enforce the reusability and the sustainability of those instruments. 
 \end{description}
 
-Faust is a great tool, and we are proud users of it, nevertheless, a studied choose of the proper tool is required for each specific case. As proposed to \emph{max}-addicted students during lessons, a library approach, like the Faust one, must be ever incentivized.
+Faust is a great tool and we are proud users of it, nevertheless, a studied choose of the proper tool is required for each specific case. Sustaining of proper choosing is most important than the comfort of the preferred tools. As proposed to \emph{max}-addicted students during lessons, a \emph{library} approach, like the \emph{Faust} one, must be ever incentivized.
 
 \subsection{SEAM Topology}
 
@@ -480,11 +485,11 @@ noi verifichiamo continuamente le acustiche e inseriamo delle continue modifiche
 
 Musical score thinking and annotating procedure to obtain a musical resultance, like the Nono's procedure of studying, practising, listening and writing once between infinite possibilities, declare itself an attempt to do something not complete in its process. The scenes division of the technical score, for example, is a procedure derived by the environment at their disposal. As we can see through the scenes navigation, they are often a solution to an old-complexity routing, but today most of these scenes could be joined and driven by more flexibles and accurate, multiple and automate remote controllers. 
 
-\begin{figure}[ht]
-\centerline{\includegraphics[width=.45\textwidth]{img/re-diagramma6c}}
-\centerline{\includegraphics[width=.45\textwidth]{img/re-diagramma3b}}
-\caption{\label{re-dia-6c}{\it Block Diagram 6c and 3b. The 6c structure is contained into 3b in a sort of redundancy of subdivision for a today practice.}}
-\end{figure}
+%\begin{figure}[ht]
+%\centerline{\includegraphics[width=.45\textwidth]{img/re-diagramma6c}}
+%\centerline{\includegraphics[width=.45\textwidth]{img/re-diagramma3b}}
+%\caption{\label{re-dia-6c}{\it Block Diagram 6c and 3b. The 6c structure is contained into 3b in a sort of redundancy of subdivision for a today practice.}}
+%\end{figure}
 
 %--------------------------------------------------------------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------------------------------------------------------------
@@ -493,41 +498,48 @@ Musical score thinking and annotating procedure to obtain a musical resultance, 
 \section{Port}
 \label{sec:porting}
 
-The porting of music informatics to a sustained programming language and technology merge into a branch of interests of the authors: The history of instruments (even the technological) and the \emph{back to the future} of music lost in the past for technological issues, into a new possibility of music playing. 
+The porting of aged music informatics of experimental instruments to a sustained programming language and technology merging into two branches of interests of the authors: The history of instruments (even the technological) and the \emph{back to the future} of music lost in the past for technological issues, into a new possibility of music playing. 
 
 %--------------------------------------------------------------------------------------------------------------------------------------
-
-\subsection{1991, \emph{Mobile Locale}, Michelangelo Lupone}
-
-Working side-by-side of Michelangelo Lupone for "Mobile Locale" porting is something extremely musical related and only marginally a technological and informatics matter. 
-
-The Fly 30 system was conceived by Lupone and developed by a CRM Research Team about five years after Lupone's Fly 10.
-
-\begin{quote}
-The different cultural and professional backgrounds of the members of the team (musicians, physicists, engineers and musicologists) united by a common appreciation of interdisciplinary problems and all specialising in informatic systems, produced the group's present capacity to create a digital system oriented towards the synthesis, analysis and real-time processing of sound signals. This system develops an immediate interaction with the user and is flexible and adaptable to the different scientific and artistic needs \cite{ml91}.
-\end{quote}
-
-The hardware and software development between the two systems was oriented on real-time interaction, as pioneered in large scale during those years by major research lab. Like Sapir and Vidolin in the same period of Lupone Fly 10 system description, as pioneers of real-time in Prometeo  production inspiring words
-
-\begin{quote}
-Con l'avvento dei sistemi informatici in tempo reale e diventato possibile ri-mettere in diretta corrispondenza il gesto con il suono ricreando il feed-back azione-suono-ascolto-azione e, di conseguenza, far uscire gli elaboratori dai laboratori e concepire delle composizioni che prevedessero una esecuzione dal vivo sia autonoma sia integrata con altri strumenti tradizionali e non \cite{savi85}. 
-\end{quote}
-
 \begin{figure}[ht]
 \centerline{\includegraphics[width=.45\textwidth]{img/lmfly10}}
 \caption{\label{ml-fly10}{\it FLY10 Module Diagram}}
 \end{figure}
 
-La figura \ref{ml-fly10} mostra i blocchi che compongono il modulo singolo. Sono due sistemi in parallelo, ciascuno formato da una board che adibita al processo dei segnali, un convertitore DAC a 12 bit in Complemento a due, un filtro passa basso di tipo butterworth (quattro celie del 2" ordine) con due frequenze di taglio selezionabili (4.5 Khz - 9.3 Khz).
+\subsection{1991, \emph{Mobile Locale}, Michelangelo Lupone}
+
+Working side by side with Michelangelo Lupone for the \emph{Mobile Locale} \cite{lmml91} porting is something extremely musical related and only marginally a technological and informatics matter. The main goal is the possibility to interpret his music, with his unavoidable sensibility at disposal of better comprehension of the music score. Close to this, the fascinating possibility to revive a beautiful work, Mobile Locale, stuck by technical problems that obscured its musical value. The work was conceived around a technology born from the same musical Lupone's thinking, at CRM\footnote{\url{http://www.crm-music.it/}} (Music Research Centre, in Rome), the System Fly \cite{ml85}. 
+
+%The Fly 30 system was conceived by Lupone and developed by a CRM Research Team about five years after Lupone's Fly 10.
+
+\begin{quote}
+The different cultural and professional backgrounds of the members of the team (musicians, physicists, engineers and musicologists) united by a common appreciation of interdisciplinary problems and all specialising in informatic systems, produced the group's present capacity to create a digital system oriented towards the synthesis, analysis and real-time processing of sound signals. This system develops an immediate interaction with the user and is flexible and adaptable to the different scientific and artistic needs \cite{ml91}.
+\end{quote}
+
+The hardware and software development between the two systems was oriented on real-time musical interaction as, during those years, was pioneered by the major research labs. At the same CIM\footnote{\url{http://www.aimi-musica.org/?page_id=13}} event in which Lupone describe the System Fly \cite{ml85},  Sylviane Sapir and Alvise Vidolin \cite{savi85} describe with inspiring words the real-time Prometeo production
+
+\begin{quote}
+Con l'avvento dei sistemi informatici in tempo reale e diventato possibile ri-mettere in diretta corrispondenza il gesto con il suono ricreando il feed-back azione-suono-ascolto-azione e, di conseguenza, far uscire gli elaboratori dai laboratori e concepire delle composizioni che prevedessero una esecuzione dal vivo sia autonoma sia integrata con altri strumenti tradizionali e non\footnote{With the appearance of real-time informatics systems, it has become possible to re-put the gesture and the sound in direct correspondence, recreating the action-sound-listening-action feed-back and, consequently, bringing the computers out of the laboratories and conceiving compositions that provided for a live performance both autonomous and integrated with other traditional and non-traditional instruments.}. 
+\end{quote}
 
 \begin{figure}[ht]
 \centerline{\includegraphics[width=.45\textwidth]{img/1-comp}}
 \caption{\label{ml-gen-dia}{\it Score General Block Diagram}}
 \end{figure}
 
+Figure \ref{ml-fly10} shows as Fly 10 modules are connected to the host interface at one side, and the DAC at other. Up to two parallel systems, made up of a card that allows the signal processing, a 12-bit DAC converter, a Butterworth Low Pass Filter made by a series of four cells of the 2nd order with two selectable cut-off frequencies at 4.5 Khz or 9.3 Khz.
+
+Knowing the structure of \emph{Fly 10}, and its procedure to generate sound at the electric stadium, is fundamental to understanding some composer tuning of algorithms and to balance the new real-time processing made by the porting and some of the original tape sounds made with the \emph{Fly 10} system. The 1991 state of the art of the \emph{System Fly 30} structure had 16Bit ADC/DAC with a sample rate up to 96KHz. For the release of \emph{Mobile Locale}, the label Edipan mastered the tape with upsampling to 16Bit at 48000Hz. The sounds generated with today real-time architecture could be in high resolution and higher sampling frequencies. Discussing with Lupone of all those historical data, and the new procedure, underlined the necessity to have a set of filters, similar to the one at the end of \emph{Fly} systems, to search a timbral balancing during the staging. 
+
+The entire electronics, both tape and live, was conceived as a shadow of the acoustic percussions and amplification of them. So there are three levels of musical matter on stage: the acoustic (complex set of percussions), the electroacoustic(sound reinforcement and early reflections simulation), the live electronics (real-time processes based to three different delay line usages). The balancing of electronics with the electroacoustic must point to hide the electronics inside the percussion sounds\footnote{Personal conversation with the composer.}.
+
+There are four places, areas, described in the algorithm respectively the QAQF Delay line with oscillator reading index, the comb filtering  Early Reflections, the scaled mix of the reflection and the two feedback delay lines WA and ZA.
+
+The first real-time object, named \emph{QAQF}, as in figure \ref{ml-gen-dia}, is a delay line read by an oscillator at some fixed rates. The higher of them, 320Hz, produces a broad signal, full of digital artefacts, that could assume different meaning if the output signal is not treated by out filters stage.
+
 \begin{figure}[ht]
 \centerline{\includegraphics[width=.45\textwidth]{img/main}}
-\caption{\label{ml-main}{\it Main processes}}
+\caption{\label{ml-main}{\it The frame of main processes. It is easy with Faust to group the code to obtain a logical diagram similar to the scored one. }}
 \end{figure}
 
 \begin{figure}[ht]
@@ -535,11 +547,13 @@ La figura \ref{ml-fly10} mostra i blocchi che compongono il modulo singolo. Sono
 \caption{\label{ml-dia-exp}{\it Score Block Diagram Explosion}}
 \end{figure}
 
+The two delays named WA and ZA have the feedback subtracted (not summed) with the input signal. It is necessary to understand the timbral significance of that choice, in the same perspective of timbral control of the shadowed electronics. 
+
+
 \begin{figure}[ht]
 \centerline{\includegraphics[width=.45\textwidth]{img/wa}}
-\caption{\label{wa-block}{\it WA Block Diagram}}
+\caption{\label{wa-block}{\it WA Block Diagram with the macro on the signal crossing before subtraction. In the sum the order of inputs doesn't matter, Faust logically feedback into the first signal, but in the difference is necessary to properly ordinate the two.}}
 \end{figure}
-
 
 %\begin{figure*}[ht]
 %\center
@@ -619,13 +633,17 @@ La figura \ref{ml-fly10} mostra i blocchi che compongono il modulo singolo. Sono
 %The reference format is the standard IEEE one. We recommend to use BibTeX to
 %create the reference list.
 
+\clearpage
+
 \section{Conclusions}
 
-With this article, the music sustainability concept was spread from live electronics music to the broader electroacoustic music. The Bernardini-Vidolin's paper \cite{bevi05} starting problem of not properly documented electronic music is the fundamental core of the concept, but the focus of this research and approach point on a less technical and more complex problem that afflicts not only the documentation of a score but musical thinking and practice at all. The research approached different topologies of electroacoustic music (the undocumented, the hole-word and the porting) consolidating same emerging critical circumstances: sustainability is only marginally related to the documentation. it is only superficially a technical issue. The documentation is a quality parameter of sustainability but is the musical practising and interpreting to build musical thinking during the years. The first concept to be clarified in the conclusions is that sustainability must aim at maintaining the musical idea, the peculiarities of the piece, of what we could define the \emph{sustainability of the process}. The works here proposed are simplifications of this fundamental aspect: the practice on difficulties araised studying each musical literature work must become documentable, sustainable and refinable musical coire of the repertoire.
+With this article, the music sustainability concept was spread from live electronics music to the broader electroacoustic music. The Bernardini-Vidolin's paper \cite{bevi05} starting problem of not properly documented electronic music is the fundamental core of the concept, but the focus of this research and approach point on a less technical and more complex problem that afflicts not only the documentation of a score but musical thinking and practice at all. The research approached different topologies of electroacoustic music (the undocumented, the hole-word and the porting) consolidating same emerging critical circumstances: sustainability is only marginally related to the documentation. it is only superficially a technical issue. The documentation is a quality parameter of sustainability but is the musical practising and interpreting to build musical thinking during the years. The first concept to be clarified in the conclusions is that sustainability must aim at maintaining the musical idea, the peculiarities of the piece, of what we could define the \emph{sustainability of the process}. The works here proposed are simplifications of this fundamental aspect: the practice on difficulties araised studying each musical literature work must become documentable, sustainable and refinable musical core of the repertoire.
 
 To improve, share and grow the musical interpretation of repertoire there are rules to be observed, we derived by informatics sustainability itself: Open and Be Open, Don't Repeat Yourself, Think and Act as Community.
 
 The process sustainability also points the fact that a community can truly build instruments one time only, as a tool, and refine it, and making it accessible through open-source, would lead to the interpretation implementation of electroacoustic compositions, preserving electronic thinking for greater progression and research within contemporary composing, untying the possibilities of realization from tools and means available during music composition.
+
+A community can operate as a Research group, with "common appreciation of interdisciplinary problems", to bring a frozen composition back to a cooked and discussed work, out of a solipsistic production-in-a-box typical of the personal computing era (cit. Berio) to focus on musical matters out of the personal knowledge. 
 
 It is necessary to focus on the main difference between technical sustainability and musical sustainability. Technical sustainability concerns the work, it is linked to the technical world that the work defines. It is its carbon dating, reproducible ecosystem. Maybe. Musical sustainability is a matter of thought that makes use of the tools to go out towards the perceptible. Supporting thought is supporting music, perception and listening.
 
