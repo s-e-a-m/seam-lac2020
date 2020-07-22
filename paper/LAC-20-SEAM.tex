@@ -23,14 +23,15 @@
 % (with the distiller) or if compiled with pdflatex.
 %
 % 20060205: added package 'hypcap' to correct hyperlinks to figures and tables
-%                      use of \papertitle and \paperauthorA, etc for same title in PDF and Metadata
+% use of \papertitle and \paperauthorA, etc for same title in PDF and Metadata
 %
 % 1) Please compile using lualatex, latex or pdflatex.
-% 2) If using pdflatex, you need your figures in a file format other than eps! e.g. png or jpg is working
+% 2) If using pdflatex, you need your figures in a file format other than eps!
+% e.g. png or jpg is working
 % 3) Please use "papertitle" and "pdfauthor" definitions below
 
-%------------------------------------------------------------------------------------------
-%  !  !  !  !  !  !  !  !  !  !  !  ! user defined variables  !  !  !  !  !  !  !  !  !  !  !  !  !  !
+%-------------------------------------------------------------------------------
+%  !  !  !  !  !  !  !  !  !  !  !  ! user defined variables  !  !  !  !  !  !
 % Please use these commands to define title and author(s) of the paper:
 \def\papertitle{SEAM PROJECT - Sustained Electroacoustic Music}
 \def\paperauthorA{Giuseppe Silvi}
@@ -40,7 +41,7 @@
 
 % Authors' affiliations have to be set below
 
-%------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 \documentclass[twoside,a4paper]{article}
 \usepackage{LAC-20}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
@@ -74,13 +75,13 @@
     pdfauthor={\paperauthorA, \paperauthorB},%, \paperauthorC, \paperauthorD},
     colorlinks=false, % links are activated as colror boxes instead of color text
     bookmarksnumbered, % use section numbers with bookmarks
-    pdfstartview=XYZ % start with zoom=100% instead of full screen; especially useful if working with a big screen :-)
-  ]{hyperref}
-  
+    pdfstartview=XYZ % start with zoom=100% instead of full screen; especially
+  ]{hyperref}        % useful if working with a big screen :-)
+
   \edef\pdfcompresslevel{\pdfvariable compresslevel}
   \pdfcompresslevel=9
   \usepackage{graphicx}
-  
+
   \usepackage[figure,table]{hypcap}
   \usepackage{fontspec}
 \else
@@ -90,12 +91,12 @@
       pdfauthor={\paperauthorA, \paperauthorB},%, \paperauthorC, \paperauthorD},
       colorlinks=false, % links are activated as colror boxes instead of color text
       bookmarksnumbered, % use section numbers with bookmarks
-      pdfstartview=XYZ % start with zoom=100% instead of full screen; especially useful if working with a big screen :-)
-    ]{hyperref}
-    
+      pdfstartview=XYZ % start with zoom=100% instead of full screen;
+    ]{hyperref}        % especially useful if working with a big screen :-)
+
     \pdfcompresslevel=9
     \usepackage{graphicx}
-    
+
     \usepackage[figure,table]{hypcap}
     \usepackage{fontspec}
   \else
@@ -107,8 +108,8 @@
         pdfauthor={\paperauthorA, \paperauthorB},%, \paperauthorC, \paperauthorD},
         colorlinks=false, % links are activated as colror boxes instead of color text
         bookmarksnumbered, % use section numbers with bookmarks
-        pdfstartview=XYZ % start with zoom=100% instead of full screen; especially useful if working with a big screen :-)
-      ]{hyperref}
+        pdfstartview=XYZ % start with zoom=100% instead of full screen;
+      ]{hyperref}        % especially useful if working with a big screen :-)
       \pdfcompresslevel=9
       \usepackage[pdftex]{graphicx}
       \usepackage[figure,table]{hypcap}
@@ -129,27 +130,34 @@
 
 \title{\papertitle}
 
-%-------------SINGLE-AUTHOR HEADER STARTS (uncomment below if your paper has a single author)-----------------------
+%-SINGLE-AUTHOR HEADER STARTS (uncomment below if your paper has a single author)
 % \affiliation{
 % \paperauthorA \,\sthanks{This work was supported by the XYZ Foundation}}
 % {\href{https://scrime.u-bordeaux.fr}{SCRIME} \\ Université de Bordeaux, France \\
 % {\tt \href{mailto:ping@linuxaudio.org}{ping@linuxaudio.org}}
 % }
-%-----------------------------------SINGLE-AUTHOR HEADER ENDS------------------------------------------------------
+%-----------------------------------SINGLE-AUTHOR HEADER ENDS-------------------
 
-%---------------TWO-AUTHOR HEADER STARTS (uncomment below if your paper has two authors)-----------------------
+%-TWO-AUTHOR HEADER STARTS (uncomment below if your paper has two authors)------
  \twoaffiliations{
- \paperauthorA \,\sthanks{Adjunct Professor in Interpretation and Performance of Electroacustic Music at the Electronic Music Department (SMERM) of the Conservatory of Music “Santa Cecilia”, Rome, Italy  }}
- {\href{https://www.conservatoriosantacecilia.it/}{SMERM} \\ Conservatory of Music “Santa Cecilia”, Rome, Italy \\
+ \paperauthorA \,\sthanks{Adjunct Professor in Interpretation and Performance of
+                          Electroacustic Music at the Electronic Music Department
+                          (SMERM) of the Conservatory of Music “Santa Cecilia”,
+                          Rome, Italy}}
+ {\href{https://www.conservatoriosantacecilia.it/}{SMERM} \\
+ Conservatory of Music “Santa Cecilia”, Rome, Italy \\
  {\tt \href{mailto:grammaton@me.com}{grammaton@me.com}}
  }
- {\paperauthorB \,\sthanks{Graduate Student of the Electronic Music Department (SMERM) of the Conservatory of Music “Santa Cecilia”, Rome, Italy }}
- {\href{https://www.conservatoriosantacecilia.it/}{SMERM} \\ Conservatory of Music “Santa Cecilia”, Rome, Italy \\
+ {\paperauthorB \,\sthanks{Graduate Student of the Electronic Music Department
+                           (SMERM) of the Conservatory of Music “Santa Cecilia”,
+                           Rome, Italy }}
+ {\href{https://www.conservatoriosantacecilia.it/}{SMERM} \\
+ Conservatory of Music “Santa Cecilia”, Rome, Italy \\
  {\tt \href{mailto:davide.tedesco.rome@gmail.com}{davide.tedesco.rome@gmail.com}}
  }
-%-------------------------------------TWO-AUTHOR HEADER ENDS------------------------------------------------------
+%-------------------------------------TWO-AUTHOR HEADER ENDS--------------------
 
-%---------------THREE-AUTHOR HEADER STARTS (uncomment below if your paper has three authors)-----------------------
+%-THREE-AUTHOR HEADER STARTS (uncomment below if your paper has three authors)--
 % \threeaffiliations{
 % \paperauthorA \,\sthanks{This work was supported by the XYZ Foundation}}
 % {\href{https://scrime.u-bordeaux.fr}{SCRIME} \\ Université de Bordeaux, France \\
@@ -160,12 +168,13 @@
 % {\tt \href{mailto:lac@ccrma.stanford.edu}{lac@ccrma.stanford.edu}}
 % }
 % {\paperauthorC \,\sthanks{Illustrious contributor}}
-% {\href{http://www.musikwissenschaft.uni-mainz.de/Musikinformatik/}{Johannes Gutenberg University (JGU)} \\  Mainz, Germany\\
+% {\href{http://www.musikwissenschaft.uni-mainz.de/Musikinformatik/}{Johannes
+%                             Gutenberg University (JGU)} \\  Mainz, Germany\\
 % {\tt \href{mailto:lac@uni-mainz.de}{lac@uni-mainz.de}}
 % }
-%-------------------------------------THREE-AUTHOR HEADER ENDS------------------------------------------------------
+%-------------------------------------THREE-AUTHOR HEADER ENDS------------------
 
-%----------------FOUR-AUTHOR HEADER STARTS (uncomment below if your paper has four authors)-----------------------
+%-FOUR-AUTHOR HEADER STARTS (uncomment below if your paper has four authors)----
 %\fouraffiliations{
 %\paperauthorA \,\sthanks{This work was supported by the XYZ Foundation}}
 %{\href{https://scrime.u-bordeaux.fr}{SCRIME} \\ Université de Bordeaux, France \\
@@ -176,89 +185,200 @@
 %{\tt \href{mailto:lac@ccrma.stanford.edu}{lac@ccrma.stanford.edu}}
 %}
 %{\paperauthorC \,\sthanks{Illustrious contributor}}
-%{\href{http://www.musikwissenschaft.uni-mainz.de/Musikinformatik/}{Johannes Gutenberg University (JGU)} \\  Mainz, Germany\\
+%{\href{http://www.musikwissenschaft.uni-mainz.de/Musikinformatik/}{Johannes
+%                            Gutenberg University (JGU)} \\  Mainz, Germany\\
 %{\tt \href{mailto:lac@uni-mainz.de}{lac@uni-mainz.de}}
 %}
 %{\paperauthorD \,\sthanks{Thanks to the predecessors for the templates}}
 %{\href{https://c-base.org/}{C-Base} \\ Berlin, Germany \\
 %{\tt \href{mailto:lac@c-base.com}{lac@c-base.com}}
 %}
-%-------------------------------------FOUR-AUTHOR HEADER ENDS------------------------------------------------------
+%-------------------------------------FOUR-AUTHOR HEADER ENDS-------------------
 
 \begin{document}
 
 \maketitle
 
-%--------------------------------------------------------------------------------------------------------------------------------------
-%--------------------------------------------------------------------------------------------------------------------------------------
-%--------------------------------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \begin{abstract}
 
-The musical composition is close to a \emph{point break}: almost one hundred years ago Ottorino Respighi introduced a recorded media into his orchestral composition \emph{I Pini di Roma}  \cite{ropr25} and, even today, we don't have a shared consolidate electroacoustic practice to play it likewise the orchestral one. Someone does it better than others, by its own equilibrium between knowledge and consciousness. After all, it is only a recorded bird sound to be placed inside an orchestra, not a virtuoso part to be played on a handmade custom electroacoustic instrument disappeared from the earth except by memories and score notes. The problem is more serious and profound if we consider that most of today's electroacoustic manipulators don't know who Respighi was, what happened after him and what are the differences between his pioneer usage of recordings, instead of the later compositional purpose usage made by John Cage \cite{cjil39}. Something must change to introduce a way that conducts a consolidation practice on electroacoustic literature.
+The musical composition is close to a \emph{point break}: almost one hundred
+years ago Ottorino Respighi introduced a recorded media into his orchestral
+composition \emph{I Pini di Roma}  \cite{ropr25} and, even today, we don't have
+a shared consolidate electroacoustic practice to play it likewise the orchestral
+one. Someone does it better than others, by its equilibrium between knowledge
+and consciousness. After all, it is only a recorded bird sound to be placed
+inside an orchestra, not a virtuoso part to be played on a handmade custom
+electroacoustic instrument disappeared from the earth except by memories and
+score notes. The problem is more serious and profound if we consider that most
+of today's electroacoustic manipulators don't know who Respighi was, what
+happened after him and what are the differences between his pioneer usage of
+recordings, instead of the later compositional purpose usage made by John Cage
+\cite{cjil39}. Something must change to introduce a way that conducts a
+consolidation practice on electroacoustic literature.
 
 \end{abstract}
 
-%--------------------------------------------------------------------------------------------------------------------------------------
-%--------------------------------------------------------------------------------------------------------------------------------------
-%--------------------------------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \section{Introduction}
 \label{sec:intro}
 
-\emph{Sustained Electro-Acoustic Music} is a project inspired by Alvise Vidolin and Nicola Bernardini's article \cite{bevi05} on \emph{live electroacoustic music sustainability}. In their text, they point at multiple technical faces of the sustainability problem such as technological, notational or general conception issues. Even if the article aforementioned focuses only on \emph{live} electroacoustic music, the concept of sustainability is applicable to any kind of documented music that uses electroacoustic environments including therefore the acousmatic works, instruments mixed with tape and structured amplified works. This will be the purpose of the presented text.
+\emph{Sustained Electro-Acoustic Music} is a project inspired by Alvise Vidolin
+and Nicola Bernardini's article \cite{bevi05} on \emph{live electroacoustic music
+sustainability}. In their text, they point at multiple technical faces of the
+sustainability problem such as technological, notational or general conception
+issues. Even if the article aforementioned focuses only on \emph{live}
+electroacoustic music, the concept of sustainability applies to any kind of
+documented music that uses electroacoustic environments including therefore the
+acousmatic works, instruments mixed with tape and structured amplified works.
+This will be the purpose of the presented text.
 
-The ambition of this project is to grow the interpretation and the electroacoustic musical practice with the consciousness of the electronic and informatics problems that had made arduous to approach this music and prevented the growth of interpretative thinking. It is possible, with a community structure, to determine, build and stratify interpretation of musical core, the repertoire, concealing the environment-related technological issues. They are instruments, not the music itself, after all.
+The ambition of this project is to grow the interpretation and the electroacoustic
+musical practice with the consciousness of the electronic and informatics problems
+that had made arduous to approach this music and prevented the growth of
+interpretative thinking. It is possible, with a community structure, to determine,
+build and stratify interpretation of musical core, the repertoire, concealing the
+environment-related technological issues. They are instruments, not the music
+itself, after all.
 
-When we refer to a virtuoso musician, we often point at a violinist or at a piano player: someone who intensely practice on his instrument. This is the central point: Does the violinist builds its own violin every time he approaches a new composition? Does the pianist? The electroacoustic musician does it, every time.
+When we refer to a virtuoso musician, we often point at a violinist or a piano
+player: someone who intensely practice on his instrument. This is the central
+point: Does the violinist builds its violin every time he approaches a new
+composition? Does the pianist? The electroacoustic musician does it, every time.
 
-%The Problem section will introduce the definition of general issues and actual circumstances. After the description of the SEAM project, there are three sections in which a starting idea of sustainability is applied and described in three different processes.
+%The Problem section will introduce the definition of general issues and actual
+%circumstances. After the description of the SEAM project, there are three
+%sections in which a starting idea of sustainability is applied and described in
+%three different processes.
 
-%--------------------------------------------------------------------------------------------------------------------------------------
-%--------------------------------------------------------------------------------------------------------------------------------------
-%--------------------------------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \section{Problems}
 \label{sec:problems}
 
-The electroacoustic music culture was born in a daily changing context. The sustainability of what the electroacoustic musicians and composers were doing, during the years, wasn't an interesting and useful point during the realisation of the compositions. 
+The electroacoustic music culture was born in a daily changing context. The
+sustainability of what the electroacoustic musicians and composers were doing,
+during the years, wasn't an interesting and useful point during the realisation
+of the compositions.
 
 \begin{quote}
-Interpretation is a way to overcome the technological obsolescence that every computer musician knows very well. [\ldots] In the beginning of IRCAM, no one was aware of the seriousness of the problem: the works produced in the 1980s were made with a total lack of concern for this issue or with an optimistic technophily. We realized the problem later, in the beginning of the 21st century \cite{lem16}.
+Interpretation is a way to overcome the technological obsolescence that every
+computer musician knows very well. [\ldots] In the beginning of IRCAM, no one was
+aware of the seriousness of the problem: the works produced in the 1980s were
+made with a total lack of concern for this issue or with an optimistic technophily.
+We realized the problem later, in the beginning of the 21st century \cite{lem16}.
 \end{quote}
 
-A point consists exactly in the necessity of a definition of computer music or more generally computer-something, today. \emph{Computer Music} was to mean something when differences between technologies started to be also compositional and musical differences. Today's evidence is that there's no music without the computer and so far we need to move on, to change, develop and solve other problems with a proper language, otherwise, the situation will remain similar to decades ago. Sustainability is an intricate and complex concept, and music sustainability sounds like an abstract problem, applied to an abstract thing only for a small number of people, such as an abstract community not related to the mass. Again, we acknowledge that mass-media, mass-culture, mass-society-things, are no place for the \emph{sustained people}.
+A point consists exactly in the necessity of a definition of computer music or
+more generally computer-something, today. \emph{Computer Music} was to mean
+something when differences between technologies started to be also compositional
+and musical differences. Today's evidence is that there's no music without the
+computer and so far we need to move on, to change, develop and solve other
+problems with a proper language, otherwise, the situation will remain similar to
+decades ago. Sustainability is an intricate and complex concept, and music
+sustainability sounds like an abstract problem, applied to an abstract thing
+only for a small number of people, such as an abstract community not related to
+the mass. Again, we acknowledge that mass-media, mass-culture, mass-society-things,
+are no place for the \emph{sustained people}.
 
-Traditionally, music composition developed through an interdisciplinary approach to research on sound and perception and writing itself. In other words, writing something that pushes the writing itself into becoming writing, towards the best comprehension of something. If actual music is afflicted or not by the contemporary and electroacoustic music issues, it is an ordinary question, but the evidence that musical thinking changed through the electroacoustic thought is an undeniable fact. Music was changed inexorably after the introduction of electronics and informatics in composition, as well as the way how it has transformed the approach to playing and production. We are not speaking about the inevitable technologic half of those facts, but of the musical one, built on literature and interpretation.
+Traditionally, music composition developed through an interdisciplinary approach
+to research on sound and perception and writing itself. In other words, writing
+something that pushes the writing itself into becoming writing, towards the best
+comprehension of something. If actual music is afflicted or not by the contemporary
+and electroacoustic music issues, it is an ordinary question, but the evidence
+that musical thinking changed through the electroacoustic thought is an undeniable
+fact. Music was changed inexorably after the introduction of electronics and
+informatics in composition, as well as the way how it has transformed the approach
+to playing and production. We are not speaking about the inevitable technologic
+half of those facts, but of the musical one, built on literature and interpretation.
 
 \begin{quote}
-To create its repertoire, the institute asked composers to write works interacting with the institute’s research departments \cite{lem16}.
+To create its repertoire, the institute asked composers to write works interacting
+with the institute's research departments \cite{lem16}.
 \end{quote}
 
-The mutation was deep enough to change some general directions, which turned out to be oriented to technical issues with technical approaches and solutions. That too technical, but less musical, approach has sliced the musical practice and composition (even the technological one) from the practice of an instrument (even the technological one also in this case). 
+The mutation was deep enough to change some general directions, which turned out
+to be oriented to technical issues with technical approaches and solutions. That
+too technical, but less musical, approach has sliced the musical practice and
+composition (even the technological one) from the practice of an instrument (even
+the technological one also in this case).
 
-%--------------------------------------------------------------------------------------------------------------------------------------
-%--------------------------------------------------------------------------------------------------------------------------------------
-%--------------------------------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \section{Neatly Layering}
 \label{sec:layering}
 
-Deutsche Grammophon released three interpretations of Beethoven's Complete Symphonies of the four made by the conductor Herbert von Karajan in less than 35 years \cite{rrrnyt}. Each of those boxsets is a collection of reproduction, not the music itself. We consider it a huge resource of thinking, (Beethoven's thinking through the Karajan's one) not a huge resource of music itself. Every man who has listened to Beethoven's music in a concert hall knows perfectly that his music can't fit in a box that can be placed in a hand. This point of view is not in coincidence with the discographic purpose that it was built for, but it doesn't matter. The point is that we have stratified musical thinking and listening attitude on Beethoven's music through interpretations of his music. We does have not rewritten his music each time and we have not built his instruments each time from ground zero. Is it a technological fact? A musical one? Both of them.
+Deutsche Grammophon released three interpretations of Beethoven's Complete
+Symphonies of the four made by the conductor Herbert von Karajan in less than
+35 years \cite{rrrnyt}. Each of those boxsets is a collection of reproduction,
+not the music itself. We consider it a huge resource of thinking, (Beethoven's
+thinking through the Karajan's one) not a huge resource of music itself. Every
+man who has listened to Beethoven's music in a concert hall knows perfectly that
+his music can't fit in a box that can be placed in a hand. This point of view is
+not in coincidence with the discographic purpose that it was built for, but it
+doesn't matter. The point is that we have stratified musical thinking and
+listening attitude on Beethoven's music through interpretations of his music.
+We do have not rewritten his music each time and we have not built his instruments
+each time from ground zero. Is it a technological fact? A musical one? Both of
+them.
 
-Luigi Nono's repertoire is not on a triple boxset of no one. It is on paper in the best-case scenario \cite{raprmt}. The \emph{Archivio Luigi Nono} does an immense musicological and production work by keeping and preserving Nono's works. So the question is: Do we have some Nono's works recordings? Yes, we have them, but what can we study and interpret of his lately composed music, like \emph{Risonanze Erranti} (mentioned later in this article), in which half of the ensemble not to consist in traditional acoustical instruments, but in \emph{Live Electronics Instruments}, dated the '80s and not fully described and neither sustained through the years? There are people that have memories of those disappeared instruments from musical daily doing and, after all, they have directly worked with Nono and can accurately describe and share what happened and what can today happen. 
+Luigi Nono's repertoire is not on a triple boxset of no one. It is on paper in
+the best-case scenario \cite{raprmt}. The \emph{Archivio Luigi Nono} does an
+immense musicological and production work by keeping and preserving Nono's works.
+So the question is: Do we have some Nono's works recordings? Yes, we have them,
+but what can we study and interpret of his lately composed music, like
+\emph{Risonanze Erranti} (mentioned later in this article), in which half of the
+ensemble not to consist in traditional acoustical instruments, but in
+\emph{Live Electronics Instruments}, dated the '80s and not fully described and
+neither sustained through the years? Some people have memories of those
+disappeared instruments from musical daily doing and, after all, they have
+directly worked with Nono and can accurately describe and share what happened
+and what can today happen.
 
 \begin{quote}
-In the classical music context, a musical interpretation requires the ability to read the music (knowing the vocabulary) and to understand the text (knowing the syntax). It also means mastering its instrument (it takes years of practice to make a virtuoso), interpreting the composer’s will (knowing the stylistic context). Finally, the musician should be able to perform the music in concert, interacting with the audience, the hall, and the other performers \cite{lem16}.
+In the classical music context, a musical interpretation requires the ability to
+read the music (knowing the vocabulary) and to understand the text (knowing the
+syntax). It also means mastering its instrument (it takes years of practice to
+make a virtuoso), interpreting the composer's will (knowing the stylistic context).
+Finally, the musician should be able to perform the music in concert, interacting
+with the audience, the hall, and the other performers \cite{lem16}.
 \end{quote}
 
-Looking at the Post-Graduate Doctoral offers for an electroacoustic musician career all over the world, there are many \emph{interactive-all-you-can-think-about} positions, but nothing about practising the electroacoustic repertoire. There are a lot of \emph{Machines (that are) Learning} something, somewhere. All over the world, the music industry conceived the purpose of doing music, with or without musical problems to solve. During that well-studied interaction learning the art of entertainment, where the industry is god, and \emph{God is a DJ}, meanwhile, it grows also a repertoire of music that we must consider the core of the actual musical thinking and conception, that will disappear in a few years if not \emph{sustained}. Not the written papers, neither the recordings of that repertoire. We have archives with \emph{clouds} for that, and some \emph{machines} to manage and take care of that, maybe. But it will disappear the practice, the interpretation, the sensibility and the musical thinking itself from roots of musical comprehension, which are at the same time the roof of composing, the inspiring starry sky.  And there will be no place to store these human-related aspects. If there are clouds, they are grey and full of rain.
+Looking at the Post-Graduate Doctoral offers for an electroacoustic musician
+career all over the world, there are many \emph{interactive-all-you-can-think-about}
+positions, but nothing about practising the electroacoustic repertoire. There are
+a lot of \emph{Machines (that are) Learning} something, somewhere. All over the
+world, the music industry conceived the purpose of doing music, with or without
+musical problems to solve. During that well-studied interaction learning the art
+of entertainment, where the industry is god, and \emph{God is a DJ}, meanwhile,
+it grows also a repertoire of music that we must consider the core of the actual
+musical thinking and conception, that will disappear in a few years if not
+\emph{sustained}. Not the written papers, neither the recordings of that
+repertoire. We have archives with \emph{clouds} for that, and some \emph{machines}
+to manage and take care of that, maybe. But it will disappear the practice, the
+interpretation, the sensibility and the musical thinking itself from roots of
+musical comprehension, which are at the same time the roof of composing, the
+inspiring starry sky. And there will be no place to store these human-related
+aspects. If there are clouds, they are grey and full of rain.
 
-Here are the focal points. What will become the electroacoustic music repertoire if not the one played in the concert hall? Why we do concentrate too many resources and time on technical problems and not on musical interpretations and playing practices of repertoire?
+Here are the focal points. What will become the electroacoustic music repertoire
+if not the one played in the concert hall? Why we do concentrate too many
+resources and time on technical problems and not on musical interpretations and
+playing practices of repertoire?
 
-%--------------------------------------------------------------------------------------------------------------------------------------
-%--------------------------------------------------------------------------------------------------------------------------------------
-%--------------------------------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \section{The Seam Community}
 \label{sec:seam}
@@ -268,49 +388,97 @@ From seam meaning:
 \begin{quote}
 \begin{it}
 A line where two pieces of fabric are sewn together\ldots \\
-An underground layer of a mineral such as coal or gold: the buried forests became seams of coal\ldots\\
+An underground layer of a mineral such as coal or gold: the buried forests
+became seams of coal\ldots\\
 Join with a seam.
 \end{it}
 \end{quote}
 
-We have to study Vidolin's gestures to understand Nono, to have a clear sight on our music through an era and join literature and practice with a seam. Vidolin is for Nono what Karajan was for Beethoven: time, consciousness and thinking. We need his work to know what was happening, what we have to do, what is necessary and what doesn't matter. And that is we have to do, seam it just one time, forever. Refine it, maintain it, and again realise it, through practice, forever. Neatly layering people's knowledge and thinking is the only way to hold back and preserve what we are loosing, preventing music from being a boxset of objects without the consciousness of music that they represent. 
+We have to study Vidolin's gestures to understand Nono, to have a clear sight on
+our music through an era and join literature and practice with a seam. Vidolin is
+for Nono what Karajan was for Beethoven: time, consciousness and thinking. We
+need his work to know what was happening, what we have to do, what is necessary
+and what doesn't matter. And that is we have to do, seam it just one time,
+forever. Refine it, maintain it, and again realise it, through practice, forever.
+Neatly layering people's knowledge and thinking is the only way to hold back and
+preserve what we are loosing, preventing music from being a boxset of objects
+without the consciousness of music that they represent.
 
-To prevent catastrophic regression of musical thinking we must consider that there are few dogmatic concepts to build, re-build and sustain an \emph{electroacoustic repertoire}:
+To prevent catastrophic regression of musical thinking we must consider that
+there are few dogmatic concepts to build, re-build and sustain an
+\emph{electroacoustic repertoire}:
+
 \begin{enumerate}
   \item Open and Be Open
   \item Don't Repeat Yourself
   \item Think and Act as Community
 \end{enumerate}
 
-\textbf{SEAM is an Open, DRY, Community.} People inside SEAM will share their knowledge to weld words, papers and literature with meaning.
+\textbf{SEAM is an Open, DRY, Community.} People inside SEAM will share their
+knowledge to weld words, papers and literature with meaning.
 
-These are the SEAM organisation coordinates: 
+These are the SEAM organisation coordinates:
 \begin{itemize}
 \item \url{http://s-e-a-m.github.io}
 \item \url{http://seam-world.slack.com}
 \end{itemize}
 
-There are notably predecessors of this kind of initiative, with a more personal oriented use, some of them has inspired this project, like the Miller Puckette's repository\footnote{\url{http://msp.ucsd.edu/pdrp/latest/files/}}. We hope the public domain community profile of SEAM can include some of those precious wizards contributes, in a more community sense, to avoid the misunderstanding of literature. An only-tech reading can bring to wrong interpretations even for great tech minds. That's how Puckette \cite{mp01} resolve a crucial description of the \emph{Dialogue}:
+There are notably predecessors of this kind of initiative, with more personal
+oriented use, some of them has inspired this project, like the Miller Puckette's
+repository\footnote{\url{http://msp.ucsd.edu/pdrp/latest/files/}}. We hope the
+public domain community profile of SEAM can include some of those precious
+wizards contributes, in a more community sense, to avoid the misunderstanding
+of literature. An only-tech reading can bring to wrong interpretations even for
+great tech minds. That's how Puckette \cite{mp01} resolve a crucial description
+of the \emph{Dialogue}:
 
 \begin{quote}
-This piece in its published form is performed by one clarinetist accompanied by a tape of the same clarinetist.
+This piece in its published form is performed by one clarinetist accompanied by
+a tape of the same clarinetist.
 \end{quote}
 
-It is not accompanied, it is a dialogue. 
+It is not accompanied, it is a dialogue.
 
-%--------------------------------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \subsection{SEAM Instruments}
 
-Developing the concepts of the instrument and instrumentalist to the combined form of those into interpretation, \cite{lem16,mp01,savi85} requires the overcoming of obsolete parallelism: the computer music performer as an artisan of \emph{new-luthiery}. There is not a sustainability conception under the deception of that wrong and obsolete metaphor. Each \emph{luthiery} is new, it evolve with musical needs. Each instrument has his inventor and his virtuoso, but in musical history, those people never coincided. The best instruments were conceived from men entirely devoted to the conception of something unique. The best virtuoso took those instruments to unveil their prospective.
+Developing the concepts of the instrument and instrumentalist to the combined
+form of those into interpretation, \cite{lem16,mp01,savi85} requires the
+overcoming of obsolete parallelism: the computer music performer as an artisan
+of \emph{new-luthiery}. There is not a sustainability conception under the
+deception of that wrong and obsolete metaphor. Each \emph{luthiery} is new, it
+evolves with musical needs. Each instrument has his inventor and his virtuoso,
+but in musical history, those people never coincided. The best instruments were
+conceived from men entirely devoted to the conception of something unique. The
+best virtuoso took those instruments to unveil their prospective.
 
 %\begin{quote}
-%For computer music, things are slightly different because of the nature of the “instrument”. There is an extra step: constructing the instrument. In this sense the computer music performer is also his own instrument-builder (luthier). Moreover, there is no school or conservatory to learn how to become a computer virtuoso today.
+%For computer music, things are slightly different because of the nature of the
+%“instrument”. There is an extra step: constructing the instrument. In this
+%sense the computer music performer is also his own instrument-builder (luthier).
+%Moreover, there is no school or conservatory to learn how to become a computer
+%virtuoso today.
 %\end{quote}
 
-During the lessons in Rome Conservatory in which \emph{SEAM} was born and its related problems were shared with classes to sensitize students to community work, the core software used to explode issues was \emph{Faust}\footnote{\url{https://faust.grame.fr}}. This wasn't a restriction, it was a preference. Text-based DSP offers the deepest learning experience and great expressivity and readability. \emph{Faust} code could be written to educate a musician at the same time with computation versatility and efficiency. The \emph{Faust libraries} concept is useful to focus on write once, and read forever, code. We think \emph{Faust} itself represents a rather concept of electroacoustic sustainability. Thinking, for example, at the \emph{filters.lib} and at the names that contributed the enrichment of speculation around each object, make us wish to a musical interest capable to do community more than with the adoption of other software.
+During the lessons in Rome Conservatory in which \emph{SEAM} was born and its
+related problems were shared with classes to sensitize students to community
+work, the core software used to explode issues was
+\emph{Faust}\footnote{\url{https://faust.grame.fr}}. This wasn't a restriction,
+it was a preference. Text-based DSP offers the deepest learning experience and
+great expressivity and readability. \emph{Faust} could be written to educate a
+musician at the same time with computation versatility and efficiency. The
+\emph{Faust libraries} concept is useful to focus on write once and read forever
+code. We think \emph{Faust} itself represents a rather concept of electroacoustic
+sustainability. Thinking, for example, at the \emph{filters.lib} and at the names
+that contributed to the enrichment of speculation around each object, make us
+wish to a musical interest capable to do community more than with the adoption
+of other software.
 
-Instruments carved by musical ideas on readable text (code) becomes a sub-literature in which each brick maintain the power of the source code, the clarity of an equation, the efficiency of the continuous development, the reusability of a word in different contexts. 
+Instruments carved by musical ideas on readable text (code) becomes a
+sub-literature in which each brick maintain the power of the source code, the
+clarity of an equation, the efficiency of the continuous development, the
+reusability of a word in different contexts.
 
 %--------------------------------------------
 %----------------larghezza massima del codice
@@ -319,70 +487,158 @@ import("stdfaust.lib");
 import("../faust-libraries/seam.lib");
 \end{lstlisting}
 
-The \emph{SEAM library} local importing points to other libraries catalogued by arguments, like in \emph{Standard Faust Libraries}. 
+The \emph{SEAM library} local importing points to other libraries catalogued by
+arguments, like in \emph{Standard Faust Libraries}.
 
 Actually there are five different libraries:
 \begin{description}
-  \item[seam.lib] contains general functions and the pointers to each specific library. It may also comprehend the custom performative environment definition, as it could be for the inputs and the outputs, the setup parameters and the performative controls.
-  \item[gerzon.lib] contains early Michael Gerzon works, his core concepts of spatialization and stereophony, that conducted him to conceive the Ambisonic technology. In a sustained environment, the role of this library is to avoid misunderstanding of what \emph{stereo} is \cite{ab58} and what we are loosing in the electroacoustic staging perception. 
-  \item[hardware.lib] contains hardware-related functions like MIDI mapping and I/O assignment to an audio interface, with a routing strategy to connect instruments to real-world hardware with a graphical user interface to map routing.
-  \item[measurement.lib] contains some audio analysis strategy to define musical display feature for audio inspection, such as integrated measurement and loudness monitoring, that are indispensable tools for today staging of public addressed music.
-  \item[nono.lib] is the first author-related library that points to contain \emph{Live Electronics Instruments}. The idea is to collect instruments into the library and use them, work by work, in a hardware-like approach. The \emph{nono.lib} should contain reusable instruments typical of his literature like the Harmonizer, the Halaphon, and so on, directly called back into the performance environment of each work, to enforce the reusability and the sustainability of those instruments. 
+  \item[seam.lib] contains general functions and the pointers to each specific
+  library. It may also comprehend the custom performative environment definition,
+  as it could be for the inputs and the outputs, the setup parameters and the
+  performative controls.
+  \item[gerzon.lib] contains early Michael Gerzon works, his core concepts of
+  spatialization and stereophony, that conducted him to conceive the Ambisonic
+  technology. In a sustained environment, the role of this library is to avoid
+  misunderstanding of what stereo is \emph{stereo} is \cite{ab58} and what we
+  are loosing in the electroacoustic staging perception.
+  \item[hardware.lib] contains hardware-related functions like MIDI mapping and
+  I/O assignment to an audio interface, with a routing strategy to connect
+  instruments to real-world hardware with a graphical user interface to map
+  routing.
+  \item[measurement.lib] contains some audio analysis strategy to define musical
+  display feature for audio inspection, such as integrated measurement and
+  loudness monitoring, that are indispensable tools for today staging of the
+  public addressed music.
+  \item[nono.lib] is the first author-related library that points to contain
+  \emph{Live Electronics Instruments}. The idea is to collect instruments into
+  the library and use them, work by work, in hardware-like approach. The
+  \emph{nono.lib} should contain reusable instruments typical of his literature
+  like the Harmonizer, the Halaphon, and so on, directly called back into the
+  performance environment of each work, to enforce the reusability and the
+  sustainability of those instruments.
 \end{description}
 
-Faust is a great tool and we are proud users of it, nevertheless, a studied choose of the proper tool is required for each specific case. Sustaining of proper choosing is most important than the comfort of the preferred tools. As proposed to \emph{max}-addicted students during lessons, a \emph{library} approach, like the \emph{Faust} one, must be ever incentivized.
+Faust is a great tool and we are proud users of it, nevertheless, a studied
+choose of the proper tool is required for each specific case. Sustaining of
+proper choosing is most important than the comfort of the preferred tools. As
+proposed to \emph{max}-addicted students during lessons, a \emph{library}
+approach, like the \emph{Faust} one, must be ever incentivized.
 
-%--------------------------------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \subsection{SEAM Topology}
 
-Referring to the electroacoustic music literature, where the substantial difference with the acoustical one is an inevitable continuously changing of the environment, we prefer to use the topology classification in place of typology one. A typology classification is, according to general type, used where characteristics of something are fixed and produce a catalogue of things. A topology classification considers instead the time-space characteristics of shape and permits the time variance of the environments. We classify three topologies of the electroacoustic music in literature:
+Referring to the electroacoustic music literature, where the substantial
+difference with the acoustical one is an inevitable continuously changing of the
+environment, we prefer to use the topology classification in place of typology
+one. A typology classification is, according to general type, used where
+characteristics of something are fixed and produce a catalogue of things. A
+topology classification considers instead the time-space characteristics of
+shape and permits the time variance of the environments. We classify three
+topologies of the electroacoustic music in literature:
 
 \begin{description}
-  \item[The undocumented] where composers use only word description to generate environment and circumstances;
-  \item[The \emph{words-hole}] where the score has deep technical documentation but listing names of undocumented instruments. Without musicological methodologies, frequently with names without a specific meaning;
-  \item[The porting] where informatics translations between languages or informatics technologies are based on literature and shared knowledge.
+  \item[The undocumented] where composers use only word description to generate
+  environment and circumstances;
+  \item[The \emph{words-hole}] where the score has deep technical documentation
+  but listing names of undocumented instruments. Without musicological
+  methodologies, frequently with names without a specific meaning;
+  \item[The porting] where informatics translations between languages or
+  informatics technologies are based on literature and shared knowledge.
 \end{description}
 
-The identification of topological classes in place of typological forms is necessary to subordinate technology-matter to the musical practice and poetics. %All three topologies are reduced to technological circumstances, not related to the musical content and form, but with the sustainability strategies routes to the music. 
+The identification of topological classes in place of typological forms is
+necessary to subordinate technology-matter to the musical practice and poetics.
+%All three topologies are reduced to technological circumstances, not related to
+%the musical content and form, but with the sustainability strategies routes to
+%the music.
 
-%--------------------------------------------------------------------------------------------------------------------------------------
-%--------------------------------------------------------------------------------------------------------------------------------------
-%--------------------------------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \section{Write the undocumented}
 \label{sec:writing}
 
-\emph{The undocumented} is the first topology class we approach. It holds all works in which composers used only word descriptions to portray the electroacoustic performing environment, with the rules and circumstances needed. Like Ottorino Respighi does with \emph{I Pini di Roma} \cite{ropr25} at the very beginnings, many composers until now never documented their works with specific usages of the technologies at their disposal. There are tons of scores that implicitly involves particular amplification, or complex electroacoustic staging, only by words description. 
+\emph{The undocumented} are the first topology class we approach. It holds all
+works in which composers used only word descriptions to portray the electroacoustic
+performing environment, with the rules and circumstances needed. Like Ottorino
+Respighi does with \emph{I Pini di Roma} \cite{ropr25} at the very beginnings,
+many composers until now never documented their works with specific usages of the
+technologies at their disposal. There are tons of scores that implicitly involves
+particular amplification, or complex electroacoustic staging, only by words
+description.
 
-%--------------------------------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \subsection{1969, \emph{I am Sitting in a Room}, Alvin Lucier}
 
-Speaking at beginner music students about Lucier's \emph{I am sitting in a room}, is a kind of sharing of a multilevel experience. There are a lot of access layers each with different bits of knowledge requirements. One of these, of course, is how you can do it today. 
+Speaking at beginner music students about Lucier's \emph{I am sitting in a room},
+is a kind of sharing of a multilevel experience. There are a lot of access layers
+each with different bits of knowledge requirements. One of these, of course, is
+how you can do it today.
 
-The score state a text to be read, it explains what is going to happen and why, so the process unveils the process itself. The acoustical properties of the space transform the speech. The “resonant frequency of the room reinforces themselves”, while the others are absorbed, they are attenuated by space. Space as an instrument to be played and articulated by time. 
+The score state a text to be read, it explains what is going to happen and why,
+so the process unveils the process itself. The acoustical properties of the
+space transform the speech. The “resonant frequency of the room reinforces
+themselves”, while the others are absorbed, they are attenuated by space. Space
+as an instrument to be played and articulated by time.
 
 \begin{quote}
-At the time of composition, the only way to realize the score of \emph{I am sitting in a room} was with tape: using two recorders the text was recycled and re-recorded, and then all the version were spliced together chronologically. Concert performances consisted of playing back this composite tape [\ldots] In the heyday of "live Electronic Music" [\ldots] the piece \emph{could} have been performed live [\ldots] but to do so would have been to miss a subtle but important detail: "I am sitting in a room \emph{different} from the one you are in now." [\ldots] \emph{I am sitting in a room} conveys this sense of rightness in a way that transcends the mechanism, phenomena, and text of the piece. It pulls the listener along with process that, whether understandable or not, seems perfectly natural, totally fascinating, intensely personal, and poignantly musical. \cite{alCD90} 
+At the time of composition, the only way to realize the score of \emph{I am
+sitting in a room} was with tape: using two recorders the text was recycled and
+re-recorded, and then all the version were spliced together chronologically.
+Concert performances consisted of playing back this composite tape [\ldots] In
+the heyday of "live Electronic Music" [\ldots] the piece \emph{could} have been
+performed live [\ldots] but to do so would have been to miss a subtle but
+important detail: "I am sitting in a room \emph{different} from the one you are
+in now." [\ldots] \emph{I am sitting in a room} conveys this sense of rightness
+in a way that transcends the mechanism, phenomena, and text of the piece. It
+pulls the listener along with process that, whether understandable or not, seems
+perfectly natural, totally fascinating, intensely personal, and poignantly
+musical. \cite{alCD90}
 \end{quote}
 
-Today the work could be realised with live-electronics, without interruption between cycles. It requires a simple delay line, sized as much as the statement, to be infinitely recycled. Again, the sensibility that had characterised the Lucier's Era, today, is overwhelmed by anxiety and incapacity to observe something in time. The time-lapse perception model is a \emph{state of mind} constriction, so, with the maximum technological support of an infinite digital delay line, without the necessity of a full perception, \emph{I am sitting} could be a surgical time-waste, at best quality, of course. The idea of space as an instrument expressed by this apostolic work requires ears and fingers twisted in a full participated perception of time-space mutation during the performance. 
+Today the work could be realised with live-electronics, without interruption
+between cycles. It requires a simple delay line, sized as much as the statement,
+to be infinitely recycled. Again, the sensibility that had characterised the
+Lucier's Era, today, is overwhelmed by anxiety and incapacity to observe something
+in time. The time-lapse perception model is a \emph{state of mind} constriction,
+so, with the maximum technological support of an infinite digital delay line,
+without the necessity of a full perception, \emph{I am sitting} could be a
+surgical time-waste, at best quality, of course. The idea of space as an
+instrument expressed by this apostolic work requires ears and fingers twisted
+in a full participated perception of time-space mutation during the performance.
 
 %\begin{figure}[ht]
 %\centerline{\includegraphics[scale=0.5]{img/BFMT-GUI}}
 %\caption{\label{lais-GUI}{\it I am sitting… B-Format GUI}}
 %\end{figure}
 
-The very deep sustainability problem of that work isn't technical. It is a simple process. The very deepest problem is sensibility. The worst thing that can happen to the \emph{process-music} is the perfect process execution without the music. To seam process and music we need to unfold ears and minds to the Lucier's perception and sensibility. How? Doing it, like he exactly suggested fifty years ago: practising. 
+The very deep sustainability problem of that work isn't technical. It is a
+simple process. The very deepest problem is sensibility. The worst thing that
+can happen to the \emph{process-music} is the perfect process execution without
+the music. To seam process and music we need to unfold ears and minds to the
+Lucier's perception and sensibility. How? Doing it, like he exactly suggested
+fifty years ago: practising.
 
 \begin{quote}
-Make versions in which one recorded statement is recycled through many rooms. Make versions using one or more speakers of different languages in different rooms. Make versions in which, for each generation, the microphone is moved to different parts of the room or rooms. Make versions that can be performed in real-time. \cite{lais69}
+Make versions in which one recorded statement is recycled through many rooms.
+Make versions using one or more speakers of different languages in different
+rooms. Make versions in which, for each generation, the microphone is moved to
+different parts of the room or rooms. Make versions that can be performed in
+real-time. \cite{lais69}
 \end{quote}
 
-The many versions proposed by the author in the music score point to multiple cases of electroacoustic staging. It is a \emph{free-your-electroacoustic-fantasy} statement, typical of the end of the sixties, unfortunately forgot the day after. To reset future people's perception by now, young musicians should do that for years, never mapping one single patch in \emph{max4live}. They need an instrument to practise music. 
+The many versions proposed by the author in the music score point to multiple
+cases of electroacoustic staging. It is a \emph{free-your-electroacoustic-fantasy}
+statement, typical of the end of the sixties, unfortunately forgot the day after.
+To reset future people's perception by now, young musicians should do that for
+years, never mapping one single patch in \emph{max4live}. They need an instrument
+to practise music.
 
-The offline process remains, like the original statement says, really unchanged. A double recording apparatus, of any nature, and a chair to sit down and practise. 
+The offline process remains, like the original statement says, really unchanged.
+A double recording apparatus, of any nature, and a chair to sit down and practise.
 
 %--------------------------------------------
 %----------------larghezza massima del codice
@@ -400,35 +656,85 @@ main = vgroup("[01] Check both boxes to
   };
 \end{lstlisting}
 
-The strategy adopted to create a real-time performative environment for \emph{I am sitting} is to count the samples of the duration of the initial statement and pass that count to the delay time. The code proposed here is only to evidence the straightforward writing in \emph{Faust}, underlining that part of the code is stolen from the \emph{Faust} manual itself. 
+The strategy adopted to create a real-time performative environment for \emph{I
+am sitting} is to count the samples of the duration of the initial statement and
+pass that count to the delay time. The code proposed here is only to evidence
+the straightforward writing in \emph{Faust}, underlining that part of the code
+is stolen from the \emph{Faust} manual itself.
 
-We propose three different ready-to-fight real-time environments, to practice with the musical behaviour of the piece. The first is one-in-one-out, easy to setup. The second is a stereophonic version, where, per stereo sound, we refer to an unbreakable experience of acoustical listening. \cite{ab58} The third is four-channel ambisonic version, usable by who four-dimensionally thinks space-related issues, like us, and wants to expand his perception. 
+We propose three different ready-to-fight real-time environments, to practice
+with the musical behaviour of the piece. The first is one-in-one-out, easy to
+setup. The second is a stereophonic version, where, per stereo sound, we refer
+to an unbreakable experience of acoustical listening. \cite{ab58} The third is
+four-channel ambisonic version, usable by who four-dimensionally thinks
+space-related issues, like us, and wants to expand his perception.
 
 \begin{lstlisting}
 process = input : main : output;
 \end{lstlisting}
 
-We introduce a three-parted environment: inputs, main, outputs. It is not a tautological issue, it is a way to insulates the main process by the personalised environment. Declaring the main group as the only place for the score related processes, each architectural custom construction useful to staging it must be outside that region. So, each input channel pre-processing and complex out-mix are predisposed in the relative paths. By this way, a work-by-work practice is straightforward looking inside the main boxes, and custom infrastructure remains the same every time. 
+We introduce a three-parted environment: inputs, main, outputs. It is not a
+tautological issue, it is a way to insulates the main process by the personalised
+environment. Declaring the main group as the only place for the score related
+processes, each architectural custom construction useful to staging it must be
+outside that region. So, each input channel pre-processing and complex out-mix
+are predisposed in the relative paths. By this way, a work-by-work practice is
+straightforward looking inside the main boxes, and custom infrastructure remains
+the same every time.
 
 \begin{figure}[ht]
 \centerline{\includegraphics[width=.45\textwidth]{img/lais-process}}
-\caption{\label{re-dia-6c}{\it The three-parted process with input and output custom infrastructures, independent from the main process. The 18 inputs are derived from \emph{RME Fireface 800} included in \emph{hardware.lib}.}}
+\caption{\label{re-dia-6c}{\it The three-parted process with input and output
+custom infrastructures, independent from the main process. The 18 inputs are
+derived from \emph{RME Fireface 800} included in \emph{hardware.lib}.}}
 \end{figure}
 
-%--------------------------------------------------------------------------------------------------------------------------------------
-%--------------------------------------------------------------------------------------------------------------------------------------
-%--------------------------------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \section{Rewrite}
 \label{sec:rewriting}
 
-The second topology of music score has a deep electroacoustic documentation and an accurate specific musical notation. Nevertheless, the documentation requires a musicological approach to unveil the meaning of, what we defined, \emph{words-hole}. \emph{Risonanze Erranti} is a long work of the latest Nono's composition period, with many live electronics instruments inside the ensemble, some of that was undocumented hardware, names without meaning, \emph{words-hole}. 
+The second topology of music score has deep electroacoustic documentation and an
+accurate specific musical notation. Nevertheless, the documentation requires a
+musicological approach to unveil the meaning of, what we defined, \emph{words-hole}.
+\emph{Risonanze Erranti} is a long work of the latest Nono's composition period,
+with many live electronics instruments inside the ensemble, some of that was
+undocumented hardware, names without meaning, \emph{words-hole}.
 
-%--------------------------------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \subsection{1989, \emph{Risonanze Erranti}, Luigi Nono}
 
-%Risonanze erranti, composta nel 1986, ebbe la sua prima esecuzione nel marzo dello stesso anno a Colonia, a cui seguirono altre due esecuzioni, Torino 1986 e Parigi 1987, prima di arrivare alla versione definitiva. Questo lavoro si configura come la prima tappa di un ciclo di Lieder che doveva svilupparsi in parallelo ai post-prae ludi (il n.1 “per Donau” e il n.3 “BAAB-ARR”), composizioni ideate “prima” di Prometeo. Tragedia dell’ascolto (1984-85), ma realizzate “dopo” e strettamente legate al virtuosismo dei suoi solisti-collaboratori. Il lavoro è dedicato a Massimo Cacciari che ha curato i testi di Prometeo e di molti altri lavori di questo periodo, oltre ad aver condiviso con Nono lo sviluppo di una nuova fase creativa a cavallo degli anni ’80 del secolo scorso. In Risonanze erranti, Nono utilizza frammenti di testi di Herman Melville, soprattuto dai Battle-Pieces and Aspects of the War (1866) e di Ingeborg Bachmann (Kleine Delikatessen, 1963) con echi musicali del passato tratti da Guillaume de Machaut (Lay de plour), Josquin Desprez (Adieu mes amours) e Johannes Ockeghem (Malheur me bat). Alterna forti contrasti dinamici  nelle percussioni con colpi secchi dei bongos e dei crotali che diventano carezze sonore quando i percussionisti sfiorano con le mani la superficie rugosa delle campane di pastori sardi, la pelle dei tamburi, i dischi di metalo dei crotali. Queste sonorità subliminali vengono ulteriormente moltiplicate e proiettate nello spazio acustico attraverso l’elettronica, con un banco di 8 echi elettronici caratterizzati da una precisa struttura ritmica asimmetrica nella sua ripetizione iterata: nelle parole di Nono, “suoni erranti nello spazio vero strumento componente sempre più in attesa”. In maniera analoga la voce si interpola con il flauto/ottavino e la tuba, confondendosi a vicenda, esplodendo in sforzatissimi a cinque f per sparire nel silenzio sonoro dei pianissimi a sei p, alternando gesti esasperati a rassegnati abbandoni in cui la parola adieu, da Desprez, si allontana nello spazio come fosse lanciata verso l’infinito.
+%Risonanze erranti, composta nel 1986, ebbe la sua prima esecuzione nel marzo
+% dello stesso anno a Colonia, a cui seguirono altre due esecuzioni, Torino 1986
+% e Parigi 1987, prima di arrivare alla versione definitiva. Questo lavoro si
+% configura come la prima tappa di un ciclo di Lieder che doveva svilupparsi in
+% parallelo ai post-prae ludi (il n.1 “per Donau” e il n.3 “BAAB-ARR”),
+% composizioni ideate “prima” di Prometeo. Tragedia dell'ascolto (1984-85), ma
+% realizzate “dopo” e strettamente legate al virtuosismo dei suoi
+% solisti-collaboratori. Il lavoro è dedicato a Massimo Cacciari che ha curato i
+% testi di Prometeo e di molti altri lavori di questo periodo, oltre ad aver
+% condiviso con Nono lo sviluppo di una nuova fase creativa a cavallo degli anni
+% '80 del secolo scorso. In Risonanze erranti, Nono utilizza frammenti di testi
+% di Herman Melville, soprattuto dai Battle-Pieces and Aspects of the War (1866)
+% e di Ingeborg Bachmann (Kleine Delikatessen, 1963) con echi musicali del
+% passato tratti da Guillaume de Machaut (Lay de plour), Josquin Desprez (Adieu
+% mes amours) e Johannes Ockeghem (Malheur me bat). Alterna forti contrasti
+% dinamici  nelle percussioni con colpi secchi dei bongos e dei crotali che
+% diventano carezze sonore quando i percussionisti sfiorano con le mani la
+% superficie rugosa delle campane di pastori sardi, la pelle dei tamburi, i
+% dischi di metalo dei crotali. Queste sonorità subliminali vengono ulteriormente
+% moltiplicate e proiettate nello spazio acustico attraverso l'elettronica, con un
+% banco di 8 echi elettronici caratterizzati da una precisa struttura ritmica
+% asimmetrica nella sua ripetizione iterata: nelle parole di Nono, “suoni erranti
+% nello spazio vero strumento componente sempre più in attesa”. In maniera
+% analoga la voce si interpola con il flauto/ottavino e la tuba, confondendosi a
+% vicenda, esplodendo in sforzatissimi a cinque f per sparire nel silenzio sonoro
+% dei pianissimi a sei p, alternando gesti esasperati a rassegnati abbandoni in
+% cui la parola adieu, da Desprez, si allontana nello spazio come fosse lanciata
+% verso l'infinito.
 %
 %Alvise Vidolin
 %
@@ -439,119 +745,289 @@ The second topology of music score has a deep electroacoustic documentation and 
 \caption{\label{re-dia-6c}{\it Block diagram of scene 11a and 11b}}
 \end{figure}
 
-To avoid misunderstanding, every technological rewriting based on block-diagram must be a partial true. Each block named with an intergalactic \emph{words-hole} can lead everywhere. The sound of the \emph{Halaphon} (to cite one of the Nono's \emph{words-hole} block) not exist. The \emph{Halaphon} was a way to connect pure musical thinking with consolidated musical practice, embracing acoustical space and electronics. Before the instrument itself, the \emph{Halaphon}, was an idea of space-related music, that became a necessity, and only at the end an opportunity.
+To avoid misunderstanding, every technological rewriting based on block-diagram
+must be a partial true. Each block named with an intergalactic words-hole can
+lead everywhere. The sound of the \emph{Halaphon} (to cite one of the Nono's
+\emph{words-hole} block) not exist. The \emph{Halaphon} was a way to connect pure
+musical thinking with consolidated musical practice, embracing acoustical space
+and electronics. Before the instrument itself, the \emph{Halaphon} was an idea of
+space-related music, that became a necessity, and only at the end an opportunity.
 
 \begin{quote}
-The Halaphon is a digital spatializer which, with the loudspeakers arranged in the room, controls the movement of sound in space. This movement must be continuous, with a soft, superimposed fading from one loudspeaker to another. The dynamics indicated in the score for the Contralto and the instruments also apply for the dynamics of the Halaphon outputs \cite{nlre87}. %Overall four interventions with the Halaphon are foreseen (see Diagrams 11, 13, 16 and 19): with the exception of the intervention of programme 16, they are all closely linked to the rhythmic-temporal execution of the voice or instruments. Further information on programming the Halaphon is to be found further on, in the paragraph Special Information, in the diagrams and notations in the score.
+The Halaphon is a digital spatializer which, with the loudspeakers arranged in the
+room, controls the movement of sound in space. This movement must be continuous,
+with a soft, superimposed fading from one loudspeaker to another. The dynamics
+indicated in the score for the Contralto and the instruments also apply for the
+dynamics of the Halaphon outputs \cite{nlre87}. %Overall four interventions with
+%the Halaphon are foreseen (see Diagrams 11, 13, 16 and 19): with the exception
+%of the intervention of programme 16, they are all closely linked to the
+%rhythmic-temporal execution of the voice or instruments. Further information on
+%programming the Halaphon is to be found further on, in the paragraph Special
+%Information, in the diagrams and notations in the score.
 \end{quote}
 
-Words can define and reduce some issues to integrate diagrams and musical notation where they are lacunose or obscure. Reading a musical score unknowing the mental state of the composer that brought it to the world is a daily committed crime. A composer poetics is inevitably invoked into the work he is producing and in his musical practice and research. Even when there are knowledge and structured thinking, even then, we can produce the wrong questions to obtain the right, not necessary, answer.  
+Words can define and reduce some issues to integrate diagrams and musical notation
+where they are lacunose or obscure. Reading a musical score unknowing the mental
+state of the composer that brought it to the world is a daily committed crime. A
+composer poetics is inevitably invoked into the work he is producing and in his
+musical practice and research. Even when there are knowledge and structured
+thinking, even then, we can produce the wrong questions to obtain the right, not
+necessary, answer.
 
 \begin{quote}
-The reverberation effect is only given a duration (is it a plate or spring reverb? are there any filter or early reflection settings?). We elected to use a high quality Lexicon reverb as we believed that this worked best musically. In other areas detailed information is given, such as precise frequencies/bandwidths for the two filter banks used \cite{rw05}.
+The reverberation effect is only given a duration (is it a plate or spring reverb?
+are there any filter or early reflection settings?). We elected to use a high
+quality Lexicon reverb as we believed that this worked best musically. In other
+areas detailed information is given, such as precise frequencies/bandwidths for
+the two filter banks used \cite{rw05}.
 \end{quote}
 
-In other areas, detailed information is given, such as precise frequencies/bandwidths for the two filter banks used, because they are musical related instrument information. An example of a not musical related instrument information is in \emph{Risonanze} score: 
+In other areas, detailed information is given, such as precise frequencies/bandwidths
+for the two filter banks used, because they are musical related instrument
+information. An example of a not musical related instrument information is in
+\emph{Risonanze} score:
 
 \begin{quote}
-This reverberation time only occurs in connection with the voice of the Contralto, and is always replayed on loudspeakers L9, 10, placed in the middle of the room, at the top. Depending on the acoustics of the hall, it may be increased to 5 seconds: However, this decision should only be taken in relation to the duration of other reverberations \cite{nlre87}.
+This reverberation time only occurs in connection with the voice of the Contralto,
+and is always replayed on loudspeakers L9, 10, placed in the middle of the room,
+at the top. Depending on the acoustics of the hall, it may be increased to 5
+seconds: However, this decision should only be taken in relation to the duration
+of other reverberations \cite{nlre87}.
 \end{quote}
 
-The difference between what could be instrument or not is very clear: the articulated performability through listening. A frequency/bandwidth is a clear musical reference, as the pitch. The sound produced by a typology of reverb is an architectural choice, as the choice of the space in which stage the piece. 
+The difference between what could be instrument or not is very clear: the
+articulated performability through listening. A frequency/bandwidth is a clear
+musical reference, as the pitch. The sound produced by a typology of reverb is
+an architectural choice, as the choice of the space in which stage the piece.
 
 \begin{quote}
-Io entro nello Studio di Freiburg, sempre, "senza idee". Senza programmi. Questo è fondamentale perché significa l'abbandono totale del logocentro, la perdita di quel principio per cui sempre un'idea dovrebbe essere antecedente alla musica. L'idea come ciò che deve essere realizzato o espresso nella musica. Oppure la storia che deve essere raccontata "in musica". [\ldots] %Nello Studio - ho detto - si entra. Ci sono strumenti musicali a disposizione e si comincia ad agire in due ordini di metodo diversi: il primo è quello vero e proprio della fisica acustica. [\ldots] Abbiamo, a Freiburg, tanti tipi di computer (uno particolarissimo, appena arrivato, ancora non lo conosciamo).
-Lavoriamo nello Studio come se fossimo Gnostici: intuizione immediata, mediata, strumentazione, ricerca. È stata la conoscenza del filosofo olandese Brouwer a introdurmi [\ldots] la necessità della "percezione della mutazione". Stiamo vivendo un'epoca di continue mutazioni, trasformazioni, frantumazioni \cite{nono85}\footnote{I always enter in the Freiburg’s Studio “without ideas”. Without any programs. This is fundamental because it signifies the total abandon of the logocentrism, the lost of that principle which establishes that any idea must come always before music. The idea as what have to be realised or expressed through music. Or the story that has to be narrated “in music”. [\dots] We work in the Studio as we were gnostics: with immediate intuition, mediate intuition, instrumentation and research. It has been the knowledge of the dutch philosopher Brouwer to introduce me [\dots] the necessity of the “perception of the mutation”. We are living in an era of continuous mutations, transformations and fragmentations.}. 
+Io entro nello Studio di Freiburg, sempre, "senza idee". Senza programmi. Questo
+è fondamentale perché significa l'abbandono totale del logocentro, la perdita di
+quel principio per cui sempre un'idea dovrebbe essere antecedente alla musica.
+L'idea come ciò che deve essere realizzato o espresso nella musica. Oppure la
+storia che deve essere raccontata "in musica". [\ldots] %Nello Studio - ho detto -
+%si entra. Ci sono strumenti musicali a disposizione e si comincia ad agire in
+%due ordini di metodo diversi: il primo è quello vero e proprio della fisica
+%acustica. [\ldots] Abbiamo, a Freiburg, tanti tipi di computer (uno
+%particolarissimo, appena arrivato, ancora non lo conosciamo).
+Lavoriamo nello Studio come se fossimo Gnostici: intuizione immediata, mediata,
+strumentazione, ricerca. È stata la conoscenza del filosofo olandese Brouwer a
+introdurmi [\ldots] la necessità della "percezione della mutazione". Stiamo
+vivendo un'epoca di continue mutazioni, trasformazioni, frantumazioni
+\cite{nono85}\footnote{I always enter in the Freiburg's Studio “without ideas”.
+Without any programs. This is fundamental because it signifies the total abandon
+of the logocentrism, the loss of that principle which establishes that any idea
+must come always before music. The idea as what has to be realised or expressed
+through music. Or the story that has to be narrated “in music”. [\dots] We work
+in the Studio as we were gnostics: with immediate intuition, mediate intuition,
+instrumentation and research. It has been the knowledge of the Dutch philosopher
+Brouwer to introduce me [\dots] the necessity of the “perception of the mutation”.
+We are living in an era of continuous mutations, transformations and fragmentations.}.
 \end{quote}
 
-If there is something that must be sustained is exactly that musical behaviour. Each of those Nono's words conducts the musician to agile and deeply performable electroacoustic musical environments. So it  passes the concept of an instrumental practice consolidated on the means and tools available. Nono himself talks about it by transversally crossing architecture, classical musical practice and technology, in executive and interpretative terms:
+If there is something that must be sustained is exactly that musical behaviour.
+Each of those Nono's words conducts the musician to agile and deeply performable
+electroacoustic musical environments. So it passes the concept of an instrumental
+practice consolidated on the means and tools available. Nono himself talks about
+it by transversally crossing architecture, classical musical practice and
+technology, in executive and interpretative terms:
 
 \begin{quote}
-Lo spazio è uno degli elementi con cui componi, anche se dall'Ottocento, dal tempo della sala da concerto e dell'opera, ciò non succede più. 
-Tutto il melodramma italiano si è realizzato in una forma già prefissata. Ma continuare così sarebbe stato come considerare vera la sola forma sonata di un certo periodo della vita di Beethoven, come se lui non avesse continuamente trasformato e stravolto quella forma fino alle ultime sonate. 
+Lo spazio è uno degli elementi con cui componi, anche se dall'Ottocento, dal tempo
+della sala da concerto e dell'opera, ciò non succede più.
+Tutto il melodramma italiano si è realizzato in una forma già prefissata. Ma
+continuare così sarebbe stato come considerare vera la sola forma sonata di un
+certo periodo della vita di Beethoven, come se lui non avesse continuamente
+trasformato e stravolto quella forma fino alle ultime sonate.
 
-Questo vuol dire, per me, pensare la musica. E la stessa cosa avviene col computer: nel tempo reale tu hai la possibilità di programmare, ma anche di intervenire, modificare, trasformare tutto, completamente. Una volta programmato, il computer non va avanti come una locomotiva sul binario, che niente la può fermare. Il computer non è intelligenza delegata agli altri. No, è un mezzo che ti obbliga a un nuovo tipo di sapere, di conoscenza, [\ldots] %esattamente come i piani acustici della chiesa di S. Lorenzo. Intendo dire che Piano ha costruito, insieme alla chiesa, una \emph{machina da sonàr} come si diceva nel Cinquecento. E con lo Studio di Friburgo, con Hans Peter Haller, con Alvise Vidolin, con il processore, le quattro orchestre e i solisti, 
-noi verifichiamo continuamente le acustiche e inseriamo delle continue modifiche a ciò che ho pensato o scritto \cite{nono84}\footnote{The space is one of the composing elements, even if from the nineteenth century, from the concert hall time and from the opera, it does not happen anymore. The italian melodrama has been realised with a prefixed construction form. To continue as it was thought initially, it could have been like we have only considered truthful the only Sonata form a certain specific Beethoven's composition period, as he never transformed and twisted the form till the last sonatas. This is, for me, thinking the music. And the same thing happens with the computer: we have the possibility to program, to intervene, to modify and to transform everything completely, in real-time. Once a computer is programmed, it will not go forward as a locomotive on a railway, which it become unstoppable. The computer is not a delegated intelligence. No, the computer is the means that obliges you to learn new types of knowledge, [\ldots] we verify continuously the acoustics and we insert changes in what I have written and thought.}. 
+Questo vuol dire, per me, pensare la musica. E la stessa cosa avviene col computer:
+nel tempo reale tu hai la possibilità di programmare, ma anche di intervenire,
+modificare, trasformare tutto, completamente. Una volta programmato, il computer
+non va avanti come una locomotiva sul binario, che niente la può fermare. Il
+computer non è intelligenza delegata agli altri. No, è un mezzo che ti obbliga a
+un nuovo tipo di sapere, di conoscenza, [\ldots] %esattamente come i piani
+%acustici della chiesa di S. Lorenzo. Intendo dire che Piano ha costruito,
+%insieme alla chiesa, una \emph{machina da sonàr} come si diceva nel Cinquecento.
+%E con lo Studio di Friburgo, con Hans Peter Haller, con Alvise Vidolin, con il
+%processore, le quattro orchestre e i solisti,
+noi verifichiamo continuamente le acustiche e inseriamo delle continue modifiche
+a ciò che ho pensato o scritto \cite{nono84}\footnote{The space is one of the
+composing elements, even if from the nineteenth century, from the concert hall
+time and from the opera, it does not happen anymore. The italian melodrama has
+been realised with a prefixed construction form. To continue as it was thought
+initially, it could have been like we have only considered truthful the only
+Sonata form a certain specific Beethoven's composition period, as he never
+transformed and twisted the form till the last sonatas. This is, for me,
+thinking the music. And the same thing happens with the computer: we have the
+possibility to program, to intervene, to modify and to transform everything
+completely, in real-time. Once a computer is programmed, it will not go forward
+as a locomotive on a railway, which it become unstoppable. The computer is not a
+delegated intelligence. No, the computer is the means that obliges you to learn
+new types of knowledge, [\ldots] we verify continuously the acoustics and we
+insert changes in what I have written and thought.}.
 \end{quote}
 
-Musical score thinking and annotating procedure to obtain a musical match, like the Nono's procedure of studying, practising, listening and writing once between infinite possibilities; declare itself as an attempt to do something not complete or not fully defined in its process. The division by scenes of the routing, in the technical score, is a procedure derived by the environment at their disposal. As we can see through the scenes navigation, they are often a solution to an old-complexity routing, but today most of these scenes could be joined and driven by more flexible and accurate, multiple and automate remote controllers. 
+Musical score thinking and annotating procedure to obtain a musical match, like
+the Nono's procedure of studying, practising, listening and writing once between
+infinite possibilities; declare itself as an attempt to do something not complete
+or not fully defined in its process. The division by scenes of the routing, in
+the technical score, is a procedure derived by the environment at their disposal.
+As we can see through the scenes navigation, they are often a solution to an
+old-complexity routing, but today most of these scenes could be joined and driven
+by more flexible and accurate, multiple and automate remote controllers.
 
 %\begin{figure}[ht]
 %\centerline{\includegraphics[width=.45\textwidth]{img/re-diagramma6c}}
 %\centerline{\includegraphics[width=.45\textwidth]{img/re-diagramma3b}}
-%\caption{\label{re-dia-6c}{\it Block Diagram 6c and 3b. The 6c structure is contained into 3b in a sort of redundancy of subdivision for a today practice.}}
+%\caption{\label{re-dia-6c}{\it Block Diagram 6c and 3b. The 6c structure is
+%contained into 3b in a sort of redundancy of subdivision for a today practice.}}
 %\end{figure}
 
-%--------------------------------------------------------------------------------------------------------------------------------------
-%--------------------------------------------------------------------------------------------------------------------------------------
-%--------------------------------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \section{Porting}
 \label{sec:porting}
 
-The porting of aged music informatics of experimental instruments to a sustained programming language and technology merging into two branches of interests of the authors: the history of instruments (even the technological ones) and the \emph{back to the future} of music lost in the past for technological issues, into a new possibility of music playing. 
+The porting of aged music informatics of experimental instruments to a sustained
+programming language and technology merging into two branches of interests of the
+authors: the history of instruments (even the technological ones) and the revival
+of music lost in the past for technological issues, into a new possibility of
+music playing.
 
 %--------------------------------------------------------------------------------------------------------------------------------------
 \begin{figure}[ht]
 \centerline{\includegraphics[width=.45\textwidth]{img/lmfly10}}
-\caption{\label{ml-fly10}{\it \emph{FLY10} Module Diagram. The modules are connected to the host interface at one side, and the DAC at other. Up to two parallel card that allows the signal processing, a 12-bit DAC converter, a series of four cells of the 2nd order Butterworth Low Pass Filter, with two selectable cut-off frequencies at 4,5 KHz or 9,3 KHz.
+\caption{\label{ml-fly10}{\it \emph{FLY10} Module Diagram. The modules are
+connected to the host interface at one side, and the DAC at other. Up to two
+parallel cards that allow the signal processing, a 12-bit DAC converter, a series
+of four cells of the 2nd order Butterworth Low Pass Filter, with two selectable
+cut-off frequencies at $4.5KHz$ or $9.3KHz$.
 }}
 \end{figure}
 
 \subsection{1991, \emph{Mobile Locale}, Michelangelo Lupone}
 
-Working side by side with Michelangelo Lupone for the \emph{Mobile Locale} \cite{lmml91} porting is something extremely musical related and only marginally a technological and informatics matter. The main goal is the possibility to interpret his music, with his unavoidable sensibility at disposal of better comprehension of the music score. Close to this, the fascinating possibility to revive a beautiful work, \emph{Mobile Locale}, stuck by technical problems that obscured its musical value. The work was conceived around a technology born from the same Lupone's musical thinking, at CRM\footnote{\url{http://www.crm-music.it/}} (Music Research Centre, in Rome), the System Fly \cite{ml85}. 
+Working side by side with Michelangelo Lupone for the \emph{Mobile Locale}
+\cite{lmml91} porting is something extremely musical related and only marginally
+a technological and informatics matter. The main goal is the possibility to
+interpret his music, with his unavoidable sensibility at disposal of better
+comprehension of the music score. Close to this, the fascinating possibility to
+revive a beautiful work, \emph{Mobile Locale}, stuck by technical problems that
+obscured its musical value. The work was conceived around a technology born from
+the same Lupone's musical thinking, at CRM\footnote{\url{http://www.crm-music.it/}}
+(Music Research Centre, in Rome), the \emph{System Fly} \cite{ml85}.
 
-%The Fly 30 system was conceived by Lupone and developed by a CRM Research Team about five years after Lupone's Fly 10.
+%The Fly 30 system was conceived by Lupone and developed by a CRM Research Team
+%about five years after Lupone's Fly 10.
 
 \begin{quote}
-The different cultural and professional backgrounds of the members of the team (musicians, physicists, engineers and musicologists) united by a common appreciation of interdisciplinary problems and all specialising in informatic systems, produced the group's present capacity to create a digital system oriented towards the synthesis, analysis and real-time processing of sound signals. This system develops an immediate interaction with the user and it is flexible and adaptable to the different scientific and artistic needs \cite{ml91}.
+The different cultural and professional backgrounds of the members of the team
+(musicians, physicists, engineers and musicologists) united by a common
+appreciation of interdisciplinary problems and all specialising in informatic
+systems, produced the group's present capacity to create a digital system
+oriented towards the synthesis, analysis and real-time processing of sound
+signals. This system develops an immediate interaction with the user and it is
+flexible and adaptable to the different scientific and artistic needs \cite{ml91}.
 \end{quote}
 
-The hardware and software development between the two systems, the \emph{Fly 10} and the \emph{Fly 30}, was oriented on real-time musical interaction as, during those years, was pioneered by the institutionalized research labs. At the same CIM\footnote{\url{http://www.aimi-musica.org/?page_id=13}} event in which Lupone described the System Fly \cite{ml85},  Sylviane Sapir and Alvise Vidolin \cite{savi85} portray, with inspiring words, the real-time \emph{Prometeo} production
+The hardware and software development between the two systems, the \emph{Fly 10}
+and the \emph{Fly 30}, was oriented on real-time musical interaction as, during
+those years, was pioneered by the institutionalized research labs. At the same
+CIM\footnote{\url{http://www.aimi-musica.org/?page_id=13}} event in which Lupone
+described the System Fly \cite{ml85},  Sylviane Sapir and Alvise Vidolin
+\cite{savi85} portray, with inspiring words, the real-time \emph{Prometeo}
+production
 
 \begin{quote}
-Con l'avvento dei sistemi informatici in tempo reale è diventato possibile ri-mettere in diretta corrispondenza il gesto con il suono ricreando il feed-back azione-suono-ascolto-azione e, di conseguenza, far uscire gli elaboratori dai laboratori e concepire delle composizioni che prevedessero una esecuzione dal vivo sia autonoma sia integrata con altri strumenti tradizionali e non\footnote{With the appearance of real-time informatics systems, it has become possible to re-put the gesture and the sound in direct correspondence, recreating the action-sound-listening-action feed-back and, consequently, bringing the computers out of the laboratories and conceiving compositions that provided for a live performance both autonomous and integrated with other traditional and non-traditional instruments.}. 
+Con l'avvento dei sistemi informatici in tempo reale è diventato possibile
+ri-mettere in diretta corrispondenza il gesto con il suono ricreando il feed-back
+azione-suono-ascolto-azione e, di conseguenza, far uscire gli elaboratori dai
+laboratori e concepire delle composizioni che prevedessero una esecuzione dal
+vivo sia autonoma sia integrata con altri strumenti tradizionali e
+non\footnote{With the appearance of real-time informatics systems, it has become
+possible to re-put the gesture and the sound in direct correspondence, recreating
+the action-sound-listening-action feed-back and, consequently, bringing the
+computers out of the laboratories and conceiving compositions that provided for a
+live performance both autonomous and integrated with other traditional and
+non-traditional instruments.}.
 \end{quote}
 
-Knowing the structure of \emph{Fly 10}, shown in figure \ref{ml-fly10}, and its procedure to generate sound at the electric stadium is fundamental to understanding some of the composer tunings of algorithms,  simultaneously to balance the new real-time processing made by the porting mixed with the original tape sound made with the \emph{Fly 10} system. The 1991 state of the art of the \emph{System Fly 30} structure had 16Bit ADC/DAC with a sample rate up to 96KHz. During the production, the sound engineer Piero Schiavoni does the recordings, the editing and the mixing of \emph{Mobile Locale}. At this stage, the electronics on tape was upsampled to 16Bit at 48000Hz. The sounds generated with today real-time architecture could be in high resolution and at higher sampling frequencies. Discussing with Lupone all those historical data and the new procedure, underlined the necessity to have a set of filters, similar to those at the end of \emph{Fly} systems, to search a timbral balancing during the staging. 
+Knowing the structure of \emph{Fly 10}, shown in figure \ref{ml-fly10}, and its
+procedure to generate sound at the electric stadium is fundamental to understanding
+some of the composer tunings of algorithms,  simultaneously to balance the new
+real-time processing made by the porting mixed with the original tape sound made
+with the \emph{Fly 10} system. The 1991 state of the art of the \emph{System Fly
+30} structure had $16Bit$ ADC/DAC with a sample rate up to $96KHz$. For the
+release of Mobile Locale, the label \emph{Edipan} mastered the tape with upsampling
+to $16Bit$ at $48KHz$. The sounds generated with today real-time architecture
+could be in high resolution and at higher sampling frequencies. Discussing with
+Lupone all those historical data and the new procedure, underlined the necessity
+to have a set of filters, similar to those at the end of \emph{Fly} systems, to
+search a timbral balancing during the staging.
 
-The entire electronics, both tape and live, was conceived as a shadow of the acoustic percussions and amplification of them. So there are three levels of musical matter on stage: the acoustic (a complex set of percussions), the electroacoustic (sound reinforcement, early reflections simulation and tape), the live electronics (real-time processes based on three different delay lines usages).
+The entire electronics, both tape and live, was conceived as a shadow of the
+acoustic percussions and amplification of them. So there are three levels of
+musical matter on stage: the acoustic (a complex set of percussions), the
+electroacoustic (sound reinforcement, early reflections simulation and tape),
+the live electronics (real-time processes based on three different delay lines
+usages).
 
 \begin{figure}[ht]
 \centerline{\includegraphics[width=.45\textwidth]{img/1-comp}}
 \caption{\label{ml-gen-dia}{\it General block diagram in score instructions.}}
 \end{figure}
 
-During the staging strategy, the entire sound direction must be focused on the balancing of the live electronics with the electroacoustic sound, that has to be hidden, by all of these, inside the percussion sounds\footnote{Personal conversation with the composer.}.
+During the staging strategy, the entire sound direction must be focused on the
+balancing of the live electronics with the electroacoustic sound, that has to be
+hidden, by all of these, inside the percussion sounds\footnote{Personal
+conversation with the composer.}.
 
-There are four places, areas, described in the general block diagram of the algorithm, respectively: the \emph{QAQF} Delay line with the sinusoidal oscillating reading index, the comb filtering  Early Reflections, the scaled mix of the reflection into one channel and the two feedback delay lines, with different step-index, named \emph{WA} and \emph{ZA}.
+There are four places, areas, described in the general block diagram of the
+algorithm, respectively: the \emph{QAQF} Delay line with the sinusoidal oscillating
+reading index, the comb filtering \emph{Early Reflections}, the scaled mix of
+the reflection into one channel and the two feedback delay lines, with different
+step-index, named \emph{WA} and \emph{ZA}.
 
-
-The \emph{QAQF} is a delay line read by an oscillator pointer at some fixed rates that, at the higher value of 320Hz, produces a broadband signal that must be treated by the output filters discussed before.
+The \emph{QAQF} is a delay line read by an oscillator pointer at some fixed rates
+that, at the higher value of 320Hz, produces a broadband signal that must be
+treated by the output filters discussed before.
 
 \begin{figure}[hb]
 \centerline{\includegraphics[width=.45\textwidth]{img/main}}
-\caption{\label{ml-main}{\it The frame of main processes. It is easy with Faust to group the code to obtain a logical diagram similar to the scored one. }}
+\caption{\label{ml-main}{\it The frame of main processes. It is easy with Faust
+to group the code to obtain a logical diagram similar to the scored one. }}
 \end{figure}
-
 
 \begin{figure}[ht]
 \centerline{\includegraphics[width=.45\textwidth]{img/2-comp}}
 \caption{\label{ml-dia-exp}{\it Score Block Diagram Explosion}}
 \end{figure}
 
-The early reflections are simulated by the different delay times of eight comb filters, projected to the audience by coupling them two by two through the four channels. In the score instructions there are not precise gain values of recursion inside the filters, instead they must be taken directly from Fly 30 patch source code.
+The early reflections are simulated by the different delay times of eight comb
+filters, projected to the audience by coupling them two by two through the four
+channels. In the score instructions, there are not precise gain values of recursion
+inside the filters, instead, they must be taken directly from Fly 30 patch source
+code.
 
-The two delays named WA and ZA have the feedback subtracted (not summed) with the input signal. It is necessary to understand the timbral significance of that choice, in the same perspective of timbral control of the shadowed electronics. 
+The two delays named WA and ZA have the feedback subtracted (not summed) with the
+input signal. It is necessary to understand the timbral significance of that
+choice, in the same perspective of timbral control of the shadowed electronics.
 
-The relationship between instrument, opera and musical idea as the core of Lupone's composition process, brings again the conversation at the necessity to have a musical instrument, not only an electronic environment, mastered to focus on expected musical behaviour. 
+The relationship between instrument, opera and musical idea as the core of Lupone's
+composition process, brings again the conversation at the necessity to have a
+musical instrument, not only an electronic environment, mastered to focus on
+expected musical behaviour.
 
 
 
 \begin{figure}[ht]
 \centerline{\includegraphics[width=.45\textwidth]{img/wa}}
-\caption{\label{wa-block}{\it WA Block Diagram with the macro on the signal crossing before subtraction. In the sum the order of inputs doesn't matter, Faust logically feedback into the first signal, but in the difference is necessary to properly ordinate the two.}}
+\caption{\label{wa-block}{\it WA Block Diagram with the macro on the signal
+crossing before subtraction. In the sum, the order of inputs doesn't matter,
+\emph{Faust} logically feedback into the first signal, but in the difference is
+necessary to properly ordinate the two.}}
 \end{figure}
 
 %\begin{figure*}[ht]
@@ -586,7 +1062,9 @@ The relationship between instrument, opera and musical idea as the core of Lupon
 %  \caption{{\it Basic trigonometric values, spanning two columns.}}
 %	\centering
 %  \begin{tabular}{|c|c|c|c|c|c|c|}\hline
-%    $\mathrm{angle}\, (\theta, \mathrm{rad})$ & $\sin \theta$ & $\cos \theta $ & $(\sin \theta)/2 $ & $(\cos \theta) /2 $ & $(\sin \theta)/3 $ & $(\cos \theta)/3$    \\\hline
+%    $\mathrm{angle}\, (\theta, \mathrm{rad})$ & $\sin \theta$ &
+%    $\cos \theta $ & $(\sin \theta)/2 $ & $(\cos \theta) /2 $ &
+%    $(\sin \theta)/3 $ & $(\cos \theta)/3$    \\\hline
 %    $\frac{\pi}{2}$ & $1$ & $0$ & $1/2$ & $0$ & $1/3$ & $0$ \\
 %    $\pi$ & $0$ & $-1$ & $0$ & $-1/2$ & $0$ & $-1/3$\\
 %    $\frac{3\pi}{2}$ & $-1$ & $0$ & $-1/2$ & $0$ & $-1/3$ & $0$ \\
@@ -636,22 +1114,63 @@ The relationship between instrument, opera and musical idea as the core of Lupon
 
 \section{Conclusions}
 
-With this article, the music sustainability concept was spread from live electronics music to the broader electroacoustic music composition and interpretation. The original issues \cite{bevi05} about music score documentation in electronic music is the fundamental core of the concept. Nevertheless, the focus of this research, and the approach, point at a less technical and more compositional and practical situation that afflicts not only the documentation of a score but the musical thinking and practice at all. 
+With this article, the music sustainability concept was spread from live
+electronics music to the broader electroacoustic music composition and
+interpretation. The original issues \cite{bevi05} about music score documentation
+in electronic music is the fundamental core of the concept. Nevertheless, the
+focus of this research, and the approach, point at a less technical and more
+compositional and practical situation that afflicts not only the documentation
+of a score but the musical thinking and practice at all.
 
-The research defines different topologies of electroacoustic music (the \emph{undocumented}, where composers use only words descriptions to generate environment and circumstances; the \emph{words-hole} where the score has deep technical documentation but listing names of undocumented instruments; the \emph{porting}, where informatics translations between languages, or informatics technologies, are based on literature and shared knowledge) consolidating emerging critical circumstances: sustainability is only marginally related to the documentation and it is only superficially a technical issue. The documentation is a quality parameter of sustainability but it is the musical practising and interpreting that will build musical thinking during the years.
+The research defines different topologies of electroacoustic music (the
+\emph{undocumented}, where composers use only words descriptions to generate
+environment and circumstances; the \emph{words-hole} where the score has deep
+technical documentation but listing names of undocumented instruments; the
+\emph{porting}, where informatics translations between languages, or informatics
+technologies, are based on literature and shared knowledge) consolidating
+emerging critical circumstances: sustainability is only marginally related to the
+documentation and it is only superficially a technical issue. The documentation
+is a quality parameter of sustainability but it is the musical practising and
+interpreting that will build musical thinking during the years.
 
-The first concept to be clarified in the conclusions is that sustainability must aim at maintaining the musical idea, the peculiarities of the piece and of what we could define as the \emph{sustainability of the process}. The compositions here treated points up to this fundamental aspect: the practice on difficulties raised studying each musical literature work must become the documentable, sustainable and improvable musical core of the repertoire.
+The first concept to be clarified in the conclusions is that sustainability must
+aim at maintaining the musical idea, the peculiarities of the piece and of what
+we could define as the \emph{sustainability of the process}. The compositions
+here treated points up to this fundamental aspect: the practice on difficulties
+raised studying each musical literature work must become the documentable,
+sustainable and improvable musical core of the repertoire.
 
-To improve, share and grow the musical interpretation of repertoire there are rules to be observed, and we derived them by informatics sustainability itself: \emph{Open and Be Open}, \emph{Don't Repeat Yourself}, \emph{Think and Act as Community}.
+To improve, share and grow the musical interpretation of repertoire there are
+rules to be observed, and we derived them by informatics sustainability itself:
+\emph{Open and Be Open}, \emph{Don't Repeat Yourself}, \emph{Think and Act as
+Community}.
 
-The sustainability process also points at the fact that a community can truly build instruments one time only, as a tool, and refine it. Making it accessible through open-source would lead to the interpretation and implementation of electroacoustic compositions, preserving electronic thinking for a greater progression. Researching within contemporary composing, means untying the possibilities of realisation from tools and means available during music composition.
+The sustainability process also points at the fact that a community can truly
+build instruments one time only, as a tool, and refine it. Making it accessible
+through open-source would lead to the interpretation and implementation of
+electroacoustic compositions, preserving electronic thinking for a greater
+progression. Researching within contemporary composing means untying the
+possibilities of realisation from tools and means available during music
+composition.
 
-A community can operate as a Research Group, with a "common appreciation of interdisciplinary problems" \cite{ml91}, to bring a time-frozen composition back to a warm and discussed work, out of a solipsistic production-in-a-box typical of the personal computing era, to focus on musical matters carved out on the personal knowledge, outside the personal point of view. 
+A community can operate as a Research Group, with a "common appreciation of
+interdisciplinary problems" \cite{ml91}, to bring a time-frozen composition back
+to a warm and discussed work, out of a solipsistic production-in-a-box typical
+of the personal computing era, to focus on musical matters carved out on the
+personal knowledge, outside the personal point of view.
 
-It is necessary to focus on the main difference between technical sustainability and musical sustainability. Technical sustainability concerns the work, it is linked to the technical world that the work defines. It is its carbon dating, the reproducible ecosystem, maybe, but it is not the work itself. Musical sustainability is a matter of thoughts, that makes use of those tools to go out towards the perceptible. Supporting the thoughts is supporting music, perception and listening.
+It is necessary to focus on the main difference between technical sustainability
+and musical sustainability. Technical sustainability concerns the work, it is
+linked to the technical world that the work defines. It is its carbon dating, the
+reproducible ecosystem, maybe, but it is not the work itself. Musical
+sustainability is a matter of thoughts, that makes use of those tools to go out
+towards the perceptible. Supporting the thoughts is supporting music, perception
+and listening.
 
 \begin{quote}
-La musica non è solo composizione. Non è artigianato, non è un mestiere. La musica è pensiero \cite{nono85}\footnote{Music is not only about composing. It’s not artisanship, neither only a craft. Music is the thought.}.
+La musica non è solo composizione. Non è artigianato, non è un mestiere. La
+musica è pensiero \cite{nono85}\footnote{Music is not only about composing.
+It's not artisanship, neither only a craft. Music is the thought.}.
 \end{quote}
 %\section{Acknowledgments}
 %
